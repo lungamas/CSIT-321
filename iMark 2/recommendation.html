@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Recommendation • iMark</title>
+  <style>
+    :root {
+      --gradient-dark: #131613;
+      --gradient-light: #138C3D;
+      --accent: #16A348;
+      --grey-bar: #666D66;
+      --sidebar: #b8b8b8;
+      --glow: #16a348;
+      --panel-solid: #D7DBD8;
+      --panel-edge: #0f322a;
+      --panel-border: #cfd4d1;
+      --pill-bg: #F7F9F8;
+      --text-dark: #121417;
+      --muted: #9aa6a3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, var(--gradient-dark) 25%, var(--gradient-light) 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Top bar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 55px;
+      background: var(--grey-bar);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 50px;
+      gap: 40px;
+      z-index: 5;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: var(--accent);
+    }
+
+    header a.active {
+      color: var(--accent);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      bottom: 0;
+      width: 230px;
+      background: var(--sidebar);
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 6;
+      border-top: 4px solid var(--glow);
+      border-right: 4px solid var(--glow);
+      border-bottom: 4px solid var(--glow);
+      border-left: none;
+      box-shadow: 5px 0 25px rgba(22, 163, 72, 0.7);
+      border-radius: 0 15px 15px 0;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links img.icon {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    .logout a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .logout a:hover {
+      color: var(--accent);
+    }
+
+    /* Background logo */
+    .bg-logo {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      opacity: 0.15;
+      filter: blur(3px);
+      pointer-events: none;
+    }
+
+    .bg-logo img {
+      width: 1500px;
+      height: auto;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 230px;
+      margin-top: 55px;
+      padding: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 30px;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Section boxes */
+    .section {
+      background: var(--panel-solid);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 0 0 var(--panel-edge) inset, 0 10px 16px rgba(0, 0, 0, 0.35);
+      color: var(--text-dark);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+      color: var(--text-dark);
+    }
+
+    .section-title img {
+      width: 32px;
+      height: 32px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    /* Upload pill */
+    .upload-pill {
+      background: var(--pill-bg);
+      border-radius: 12px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1b1b1b;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .upload-pill input[type=file] {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .upload-pill img {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      opacity: 0.9;
+    }
+
+    .helper {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Buttons */
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .btn-primary {
+      flex: 1;
+      background: linear-gradient(180deg, #37b45c, #1e8f45);
+      border: none;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      transition: transform 0.15s ease, filter 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: #ffffff;
+      color: #1f2a1f;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-ghost a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .btn-ghost:hover {
+      filter: brightness(0.98);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 15px;
+      right: 20px;
+      font-size: 12px;
+      color: #ccc;
+      letter-spacing: 0.03em;
+    }
+
+    /* Preset prompt styling */
+    .preset-container {
+      margin-top: 4px;
+    }
+
+    .preset-hint {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .preset-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .preset-option {
+      width: 100%;
+      text-align: left;
+      background: var(--pill-bg);
+      border-radius: 10px;
+      border: 1px solid var(--panel-border);
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    }
+
+    .preset-option::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-top: 5px;
+      border-radius: 999px;
+      border: 2px solid var(--muted);
+      background: transparent;
+      flex-shrink: 0;
+    }
+
+    .preset-option span {
+      flex: 1;
+    }
+
+    .preset-option:hover {
+      background: #e7ece9;
+      transform: translateY(-1px);
+    }
+
+    .preset-option.selected {
+      background: linear-gradient(135deg, var(--accent), #0f7f33);
+      color: #f9fff9;
+      border-color: #5ee58c;
+      transform: translateY(-1px);
+    }
+
+    .preset-option.selected::before {
+      border-color: #bbf7d0;
+      background: #bbf7d0;
+    }
+
+    .prompt-error {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #fca5a5;
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 60px 24px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <header>
+    <a href="home.html" target="_self">Home</a>
+    <a href="services.html" class="active" target="_self">Services</a>
+    <a href="help.html" target="_self">Help</a>
+    <a href="policy.html" target="_self">Privacy policy</a>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo" /></div>
+      <div class="nav-links">
+        <a href="dashboard.html" target="_self">
+          <img src="dashboard.png" class="icon" alt="Dashboard icon"> Dashboard
+        </a>
+        <a href="insights.html" target="_self">
+          <img src="insights.png" class="icon" alt="Insights icon"> Previous Insights
+        </a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html" target="_self">Logout</a></div>
+  </aside>
+
+  <!-- Background watermark -->
+  <div class="bg-logo"><img src="iMark.png" alt="background logo" /></div>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Content Recommendation</h1>
+
+    <!-- About -->
+    <section class="section">
+      <div class="section-title">
+        <img src="about.png" alt="About icon">
+        <h2>About This Feature</h2>
+      </div>
+      <p>
+        The Content Recommendation AI generates tailored marketing strategies based on your
+        company or product idea. It suggests what type of content to create, where to publish it,
+        when to post, and which formats to prioritize to maximize impact.
+      </p>
+    </section>
+
+    <!-- Upload -->
+    <section class="section">
+      <div class="section-title">
+        <img src="upload.png" alt="Upload icon">
+        <h2>Upload Files</h2>
+      </div>
+
+      <label class="upload-pill">
+        <img src="upload.png" alt="Upload Icon"> Browse Device
+        <input type="file" id="fileUploadRecommendation" accept=".csv,.xlsx,.json,.txt,.pdf" />
+      </label>
+      <p class="helper">You can upload product briefs, campaign summaries, or audience research documents.</p>
+    </section>
+
+    <!-- Prompt presets -->
+    <section class="section">
+      <div class="section-title">
+        <img src="prompt.png" alt="Prompt icon">
+        <h2>Prompt Task</h2>
+      </div>
+
+      <div class="preset-container">
+        <p class="preset-hint">Select the type of content strategy you want iMark to generate:</p>
+        <div class="preset-list" id="presetList">
+          <!-- Prompt 1 – Strategy -->
+          <button
+            type="button"
+            class="preset-option"
+            data-mode="strategy"
+            data-value="Create a complete multi-platform content strategy for this product, including recommended platforms, content types, and posting frequency.">
+            <span>
+              Create a complete multi-platform content strategy for this product, including recommended platforms,
+              content types, and posting frequency.
+            </span>
+          </button>
+
+          <!-- Prompt 2 – Formats -->
+          <button
+            type="button"
+            class="preset-option"
+            data-mode="formats"
+            data-value="Recommend which content formats (video, image, carousel, story, or text) will work best for this campaign, and explain how to use each format.">
+            <span>
+              Recommend which content formats (video, image, carousel, story, or text) will work best for this campaign,
+              and explain how to use each format.
+            </span>
+          </button>
+
+          <!-- Prompt 3 – Calendar -->
+          <button
+            type="button"
+            class="preset-option"
+            data-mode="calendar"
+            data-value="Generate a 7-day content calendar for this product, including what to post each day, on which platform, and at what time.">
+            <span>
+              Generate a 7-day content calendar for this product, including what to post each day, on which platform,
+              and at what time.
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" type="button" id="generateBtn">Generate Insights</button>
+        <button class="btn-ghost" type="button">
+          <a href="recommendation.html" target="_self">New Insight</a>
+        </button>
+      </div>
+
+      <p id="promptError" class="prompt-error">
+        Please select one of the options above before generating insights.
+      </p>
+    </section>
+
+    <!-- Generated content result -->
+    <section class="section" id="resultSection" style="display:none; margin-top:22px;">
+      <div class="section-title">
+        <img src="content.png" alt="Result icon">
+        <h2>Generated Content Pack</h2>
+      </div>
+      <div id="resultContent"></div>
+    </section>
+  </main>
+
+  <footer>POWERED BY NULL SPACE</footer>
+
+  <!-- Updated script -->
+  <script>
+    const presetButtons = document.querySelectorAll('.preset-option');
+    const generateBtn = document.getElementById('generateBtn');
+    const promptError = document.getElementById('promptError');
+    const fileInput = document.getElementById('fileUploadRecommendation');
+    const resultSection = document.getElementById('resultSection');
+    const resultContent = document.getElementById('resultContent');
+
+    let selectedPrompt = "";
+    let selectedMode = "strategy"; // 'strategy' | 'formats' | 'calendar'
+
+    // Select Prompt
+    presetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetButtons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        promptError.style.display = 'none';
+
+        selectedPrompt = btn.dataset.value || btn.textContent.trim();
+        selectedMode = btn.dataset.mode || "strategy";
+      });
+    });
+
+    generateBtn.addEventListener('click', async () => {
+      const selected = document.querySelector('.preset-option.selected');
+      if (!selected) {
+        promptError.style.display = 'block';
+        return;
+      }
+
+      const formData = new FormData();
+      // Optional file: if none, backend uses base CSV
+      if (fileInput.files.length > 0) {
+        formData.append("file", fileInput.files[0]);
+      }
+      // Tell backend which task mode to use
+      formData.append("task", selectedMode);
+
+      try {
+        const response = await fetch("/content/run", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          alert(data.error || "Failed to generate content insights");
+          return;
+        }
+
+        // Show results box
+        resultSection.style.display = "block";
+
+        // ---------- MODE 2: FORMATS ----------
+        if (data.type === "content_formats") {
+          const listHtml = (data.formats_ranked || [])
+            .map(f => `
+              <li>
+                <b>${f.format}</b> · Avg Score: ${Number(f.avg_score).toFixed(3)}
+                ${f.best_channel ? ` · Best on <b>${f.best_channel}</b>` : ""}
+                ${f.example_persona ? ` · Example persona: <i>${f.example_persona}</i>` : ""}
+                ${f.example_goal ? ` (${f.example_goal})` : ""}
+              </li>
+            `)
+            .join("");
+
+          const tableRowsHtml = (data.table || [])
+            .slice(0, 25)
+            .map(row => `
+              <tr>
+                <td>${row.content_id}</td>
+                <td>${row.persona_key}</td>
+                <td>${row.campaign_goal}</td>
+                <td>${row.channel}</td>
+                <td>${row.format}</td>
+                <td>${Number(row.predicted_score).toFixed(3)}</td>
+              </tr>
+            `)
+            .join("");
+
+          resultContent.innerHTML = `
+            <h3 style="margin-bottom:10px;">Best Content Formats by Predicted Performance</h3>
+            <p style="margin-bottom:10px;">
+              These formats are ranked by their average predicted score across all campaigns in your dataset.
+            </p>
+            <ul style="margin-bottom:18px;">
+              ${listHtml || "<li>No format insights available.</li>"}
+            </ul>
+
+            <h3>Underlying Content Items (Sample)</h3>
+            <table border="1" width="100%" cellpadding="8" style="margin-top:10px;border-collapse:collapse;">
+              <tr>
+                <th>Content ID</th>
+                <th>Persona</th>
+                <th>Campaign Goal</th>
+                <th>Channel</th>
+                <th>Format</th>
+                <th>Score</th>
+              </tr>
+              ${tableRowsHtml}
+            </table>
+          `;
+        }
+
+        // ---------- MODE 3: CALENDAR ----------
+        else if (data.type === "content_calendar") {
+          const calendarRowsHtml = (data.calendar || [])
+            .map(row => `
+              <tr>
+                <td>${row.day}</td>
+                <td>${row.persona_key}</td>
+                <td>${row.campaign_goal}</td>
+                <td>${row.channel}</td>
+                <td>${row.format}</td>
+                <td>${Number(row.predicted_score).toFixed(3)}</td>
+              </tr>
+            `)
+            .join("");
+
+          resultContent.innerHTML = `
+            <h3 style="margin-bottom:10px;">7-Day Content Calendar (Auto-Generated)</h3>
+            <p style="margin-bottom:10px;">
+              Each day uses a high-scoring content idea with a different channel/format combination.
+            </p>
+            <table border="1" width="100%" cellpadding="8" style="margin-top:10px;border-collapse:collapse;">
+              <tr>
+                <th>Day</th>
+                <th>Persona</th>
+                <th>Campaign Goal</th>
+                <th>Channel</th>
+                <th>Format</th>
+                <th>Score</th>
+              </tr>
+              ${calendarRowsHtml || "<tr><td colspan='6'>No calendar could be generated.</td></tr>"}
+            </table>
+          `;
+        }
+
+        // ---------- DEFAULT / MODE 1: STRATEGY ----------
+        else {
+          const topListHtml = (data.top_recommendations || [])
+            .map(item => `
+              <li>
+                <b>${item.persona_key}</b> – ${item.campaign_goal}
+                on <b>${item.channel}</b> (${item.format}) ·
+                Score: ${Number(item.predicted_score).toFixed(3)}
+              </li>
+            `)
+            .join("");
+
+          const tableRowsHtml = (data.table || [])
+            .slice(0, 25)
+            .map(row => `
+              <tr>
+                <td>${row.content_id}</td>
+                <td>${row.persona_key}</td>
+                <td>${row.campaign_goal}</td>
+                <td>${row.channel}</td>
+                <td>${row.format}</td>
+                <td>${Number(row.predicted_score).toFixed(3)}</td>
+              </tr>
+            `)
+            .join("");
+
+          resultContent.innerHTML = `
+            <h3 style="margin-bottom:10px;">Top Content Recommendations (ML)</h3>
+            <ul style="margin-bottom:18px;">
+              ${topListHtml || "<li>No recommendations returned.</li>"}
+            </ul>
+
+            <h3>Full Recommendation Table</h3>
+            <table border="1" width="100%" cellpadding="8" style="margin-top:10px;border-collapse:collapse;">
+              <tr>
+                <th>Content ID</th>
+                <th>Persona</th>
+                <th>Campaign Goal</th>
+                <th>Channel</th>
+                <th>Format</th>
+                <th>Score</th>
+              </tr>
+              ${tableRowsHtml}
+            </table>
+          `;
+        }
+      } catch (err) {
+        console.error("Content fetch error:", err);
+        alert("Something went wrong while generating content insights.");
+      }
+    });
+  </script>
+</body>
+</html>

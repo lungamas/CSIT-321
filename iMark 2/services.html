@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iMark • Services</title>
+  <style>
+    :root {
+      --gradient-dark: #131613;
+      --gradient-light: #138C3D;
+      --accent: #16A348;
+      --grey-bar: #666D66;
+      --sidebar: #b8b8b8;
+      --glow: #16a348;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Poppins", Arial, sans-serif; }
+
+    body {
+      background: linear-gradient(145deg, var(--gradient-dark) 25%, var(--gradient-light) 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 55px;
+      background: var(--grey-bar);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 50px;
+      gap: 40px;
+      z-index: 5;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover { color: var(--accent); }
+    header a.active { color: var(--accent); }
+
+    .sidebar {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      bottom: 0;
+      width: 230px;
+      background: var(--sidebar);
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 6;
+      border-top: 4px solid var(--glow);
+      border-right: 4px solid var(--glow);
+      border-bottom: 4px solid var(--glow);
+      border-left: none;
+      box-shadow: 5px 0 25px rgba(22, 163, 72, 0.7);
+      border-radius: 0 15px 15px 0;
+    }
+
+    .logo { display: flex; justify-content: center; margin-bottom: 60px; }
+    .logo img { height: 60px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-links img.icon {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    .logout a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .logout a:hover { color: var(--accent); }
+
+    main {
+      margin-left: 230px;
+      margin-top: 55px;
+      height: calc(100vh - 55px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .bg-logo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      opacity: 0.15;
+      filter: blur(3px);
+      pointer-events: none;
+    }
+
+    .bg-logo img {
+      width: 1500px;
+      height: auto;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+    }
+
+    h1 { font-size: 56px; margin-bottom: 10px; }
+    h2 { font-size: 28px; font-weight: 600; margin-bottom: 15px; }
+    p { font-size: 18px; color: #ddd; margin-bottom: 50px; }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 260px;
+      height: 220px;
+      background: linear-gradient(145deg, #0f1a0f, #138C3D);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(22, 163, 72, 0.8);
+    }
+
+    .card img { width: 50px; height: 50px; margin-bottom: 15px; }
+    .card h3 { font-size: 18px; margin-bottom: 10px; font-weight: 700; }
+    .card p { font-size: 13px; color: #c9c9c9; }
+
+    footer {
+      position: fixed;
+      bottom: 15px;
+      right: 20px;
+      font-size: 12px;
+      color: #ccc;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" target="_self">Home</a>
+    <a href="services.html" class="active" target="_self">Services</a>
+    <a href="help.html" target="_self">Help</a>
+    <a href="policy.html" target="_self">Privacy policy</a>
+  </header>
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo" /></div>
+      <div class="nav-links">
+        <a href="dashboard.html" target="_self">
+          <img src="dashboard.png" alt="Dashboard icon" class="icon" /> Dashboard
+        </a>
+        <a href="insights.html" target="_self">
+          <img src="insights.png" alt="Insights icon" class="icon" /> Previous Insights
+        </a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html" target="_self">Logout</a></div>
+  </aside>
+
+  <main>
+    <div class="bg-logo"><img src="iMark.png" alt="background logo" /></div>
+
+    <div class="content">
+      <h1>Welcome</h1>
+      <h2>Explore&nbsp;&nbsp;Features</h2>
+      <p>Unlock smart solutions designed to understand your audience and generate impactful content.</p>
+
+      <div class="cards">
+        <a href="segmentation.html" target="_self" class="card">
+          <img src="segmentation.png" alt="Segmentation Reporting icon" />
+          <h3>Segmentation Reporting</h3>
+          <p>Automatically group customers based on behavior and data to generate insightful personas.</p>
+        </a>
+
+        <a href="performance.html" target="_self" class="card">
+          <img src="performance.png" alt="Performance Reporting icon" />
+          <h3>Performance Reporting</h3>
+          <p>Track engagement and reach through real-time analytics powered through your company's data.</p>
+        </a>
+
+        <a href="recommendation.html" target="_self" class="card">
+          <img src="content.png" alt="Content Generation icon" />
+          <h3>Content Recommendation</h3>
+          <p>Receive AI-generated captions, hashtags, and slogans tailored to your campaign goals.</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>POWERED BY NULL SPACE</footer>
+</body>
+</html>

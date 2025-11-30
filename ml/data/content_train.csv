@@ -1,0 +1,501 @@
+content_id,persona_key,campaign_goal,channel,format,avg_engagement_rate,avg_conversion_rate,avg_roas,sample_size
+1,Trend Seekers,Reactivation,Email,Reel,0.0618,0.0316,0.751,2296
+2,Eco-Lux Loyalists,Retention,YouTube,Short Video Ad,0.1305,0.1084,21.13,4105
+3,Trend Seekers,Retention,Email,Story,0.0868,0.0868,13.883,4402
+4,Eco-Lux Loyalists,Upsell,Facebook,Static Ad,0.1066,0.0498,22.494,3451
+5,Aspiring Aesthetes,Retention,Website Blog,Carousel,0.1547,0.0529,18.541,1062
+6,Trend Seekers,Conversion,Instagram,Story,0.104,0.0767,15.512,4714
+7,Aspiring Aesthetes,Retention,YouTube,Static Ad,0.0365,0.0573,15.971,3363
+8,Trend Seekers,Upsell,Website Blog,Reel,0.0839,0.0621,14.944,3195
+9,Budget Essentials,Reactivation,Facebook,UGC Video,0.2415,0.0982,18.744,3193
+10,Eco-Lux Loyalists,Reactivation,Facebook,Story,0.1578,0.0522,10.243,3000
+11,Eco-Gift Shoppers,Conversion,TikTok,Blog Post,0.2223,0.04,7.885,377
+12,Trend Seekers,Awareness,YouTube,Story,0.1648,0.0635,0.959,626
+13,Eco-Gift Shoppers,Conversion,TikTok,Short Video Ad,0.2398,0.0204,19.409,2056
+14,Budget Essentials,Reactivation,Email,Reel,0.0873,0.0185,13.12,2772
+15,Aspiring Aesthetes,Upsell,YouTube,Blog Post,0.2099,0.1178,14.084,906
+16,Trend Seekers,Upsell,Email,Long-form Copy,0.0655,0.0777,10.564,1669
+17,Eco-Lux Loyalists,Reactivation,Instagram,UGC Video,0.1013,0.0902,20.372,4749
+18,Eco-Gift Shoppers,Awareness,Instagram,Long-form Copy,0.0834,0.0205,4.594,3940
+19,Aspiring Aesthetes,Awareness,Pinterest,Carousel,0.2025,0.109,8.884,2342
+20,Budget Essentials,Reactivation,Pinterest,Static Ad,0.0332,0.0125,21.524,3809
+21,Budget Essentials,Retention,Facebook,GIF Ad,0.2158,0.0243,9.152,4153
+22,Trend Seekers,Retention,Facebook,Story,0.1635,0.0689,10.625,1941
+23,Eco-Lux Loyalists,Reactivation,Pinterest,UGC Video,0.0839,0.1006,6.502,1691
+24,Eco-Lux Loyalists,Reactivation,TikTok,Long-form Copy,0.1531,0.0332,12.055,3941
+25,Eco-Lux Loyalists,Awareness,TikTok,Story,0.0252,0.0188,12.549,1272
+26,Eco-Lux Loyalists,Conversion,Instagram,Long-form Copy,0.047,0.1022,7.783,3963
+27,Aspiring Aesthetes,Reactivation,YouTube,Long-form Copy,0.0384,0.0244,13.105,4376
+28,Trend Seekers,Retention,Facebook,GIF Ad,0.1493,0.1156,24.407,2255
+29,Eco-Lux Loyalists,Awareness,Website Blog,UGC Video,0.2158,0.0521,10.897,3115
+30,Budget Essentials,Awareness,Email,GIF Ad,0.0877,0.0721,16.178,1015
+31,Budget Essentials,Retention,Instagram,Blog Post,0.0323,0.0262,21.423,249
+32,Aspiring Aesthetes,Reactivation,TikTok,Reel,0.2336,0.043,19.41,270
+33,Aspiring Aesthetes,Upsell,YouTube,Reel,0.1694,0.0106,7.37,2541
+34,Eco-Lux Loyalists,Awareness,Facebook,UGC Video,0.1996,0.0305,18.092,2786
+35,Aspiring Aesthetes,Conversion,Website Blog,Story,0.1083,0.0539,2.023,1882
+36,Eco-Gift Shoppers,Reactivation,Website Blog,Carousel,0.1655,0.0883,6.64,280
+37,Budget Essentials,Upsell,YouTube,Short Video Ad,0.0752,0.1059,24.797,361
+38,Trend Seekers,Conversion,TikTok,Short Video Ad,0.0921,0.0758,13.249,1013
+39,Eco-Lux Loyalists,Awareness,Pinterest,Long-form Copy,0.0688,0.0769,11.467,3688
+40,Eco-Gift Shoppers,Upsell,Website Blog,Static Ad,0.1864,0.0475,12.921,4883
+41,Eco-Lux Loyalists,Awareness,Website Blog,Blog Post,0.1248,0.1061,3.12,2103
+42,Aspiring Aesthetes,Awareness,YouTube,Reel,0.1693,0.0639,7.401,1147
+43,Trend Seekers,Reactivation,Facebook,Static Ad,0.1175,0.0705,10.306,203
+44,Budget Essentials,Retention,TikTok,GIF Ad,0.0448,0.0421,10.444,1248
+45,Budget Essentials,Awareness,TikTok,Long-form Copy,0.0312,0.1187,17.657,2061
+46,Eco-Gift Shoppers,Retention,Email,UGC Video,0.1486,0.0629,23.104,1097
+47,Eco-Lux Loyalists,Conversion,YouTube,Static Ad,0.2106,0.1164,1.465,525
+48,Eco-Gift Shoppers,Reactivation,Email,UGC Video,0.1782,0.041,8.411,2967
+49,Trend Seekers,Upsell,YouTube,Reel,0.1821,0.0883,7.181,2493
+50,Aspiring Aesthetes,Reactivation,Pinterest,Carousel,0.2498,0.0757,4.83,1456
+51,Trend Seekers,Retention,Facebook,Long-form Copy,0.2115,0.0731,21.287,2037
+52,Budget Essentials,Upsell,TikTok,Story,0.0368,0.0995,4.847,1418
+53,Eco-Gift Shoppers,Retention,Facebook,Static Ad,0.2198,0.0786,23.736,883
+54,Aspiring Aesthetes,Reactivation,YouTube,Blog Post,0.1826,0.09,12.2,2021
+55,Trend Seekers,Upsell,TikTok,Static Ad,0.1349,0.0477,13.769,3677
+56,Budget Essentials,Conversion,Email,Carousel,0.2423,0.1192,10.87,3472
+57,Budget Essentials,Awareness,Facebook,Short Video Ad,0.227,0.0714,0.506,3701
+58,Aspiring Aesthetes,Conversion,Instagram,Reel,0.1598,0.0137,8.203,1446
+59,Aspiring Aesthetes,Upsell,TikTok,Story,0.0183,0.1111,10.648,2723
+60,Eco-Lux Loyalists,Upsell,Website Blog,Reel,0.0693,0.0992,0.895,1326
+61,Trend Seekers,Reactivation,Facebook,Reel,0.0149,0.1037,9.885,2293
+62,Trend Seekers,Conversion,Pinterest,Short Video Ad,0.1617,0.101,13.685,2634
+63,Budget Essentials,Retention,Instagram,Reel,0.1566,0.1108,24.938,3475
+64,Trend Seekers,Reactivation,Instagram,Blog Post,0.0278,0.0735,11.581,4941
+65,Trend Seekers,Conversion,Pinterest,Reel,0.1962,0.0541,19.966,2521
+66,Eco-Lux Loyalists,Upsell,Facebook,UGC Video,0.0241,0.1193,15.619,2246
+67,Eco-Lux Loyalists,Conversion,TikTok,Carousel,0.2219,0.0184,14.684,4717
+68,Trend Seekers,Reactivation,YouTube,Carousel,0.1933,0.0874,8.339,671
+69,Aspiring Aesthetes,Awareness,Website Blog,Static Ad,0.1148,0.0725,9.869,1912
+70,Eco-Lux Loyalists,Retention,Website Blog,Carousel,0.1648,0.032,14.557,2413
+71,Eco-Lux Loyalists,Retention,Pinterest,Story,0.0516,0.0833,12.77,2433
+72,Eco-Gift Shoppers,Reactivation,Email,Static Ad,0.1999,0.0151,14.691,2244
+73,Budget Essentials,Conversion,Facebook,Static Ad,0.172,0.0247,21.045,3104
+74,Eco-Lux Loyalists,Reactivation,Email,GIF Ad,0.1454,0.1098,6.932,1305
+75,Eco-Gift Shoppers,Awareness,Facebook,Long-form Copy,0.0745,0.1163,8.785,3576
+76,Trend Seekers,Upsell,YouTube,UGC Video,0.0753,0.0484,22.394,4412
+77,Trend Seekers,Awareness,TikTok,GIF Ad,0.1712,0.0767,4.99,3225
+78,Eco-Lux Loyalists,Reactivation,Email,UGC Video,0.2456,0.0109,6.093,4497
+79,Budget Essentials,Upsell,TikTok,Reel,0.0232,0.078,22.761,1583
+80,Eco-Gift Shoppers,Upsell,Website Blog,Reel,0.1863,0.1145,8.224,4525
+81,Aspiring Aesthetes,Upsell,Email,Static Ad,0.0577,0.0786,22.213,4816
+82,Budget Essentials,Conversion,Facebook,Long-form Copy,0.0143,0.1091,7.156,2601
+83,Eco-Lux Loyalists,Retention,Email,UGC Video,0.1522,0.037,5.142,1559
+84,Eco-Lux Loyalists,Awareness,YouTube,UGC Video,0.1525,0.0696,18.755,2714
+85,Eco-Lux Loyalists,Reactivation,Email,Short Video Ad,0.0176,0.064,7.633,385
+86,Aspiring Aesthetes,Upsell,Facebook,GIF Ad,0.0927,0.1169,18.469,4574
+87,Eco-Gift Shoppers,Upsell,TikTok,Reel,0.2451,0.1067,13.106,4542
+88,Eco-Gift Shoppers,Upsell,TikTok,UGC Video,0.1737,0.0221,17.549,1972
+89,Aspiring Aesthetes,Reactivation,TikTok,Reel,0.072,0.0792,20.163,1229
+90,Aspiring Aesthetes,Retention,YouTube,Short Video Ad,0.0546,0.0956,19.084,207
+91,Eco-Lux Loyalists,Awareness,YouTube,GIF Ad,0.1837,0.0536,15.726,1068
+92,Trend Seekers,Conversion,Email,GIF Ad,0.2461,0.1035,8.475,2143
+93,Eco-Gift Shoppers,Upsell,Instagram,Carousel,0.1396,0.0581,5.185,4174
+94,Trend Seekers,Conversion,TikTok,Reel,0.1934,0.0401,3.591,4812
+95,Aspiring Aesthetes,Upsell,Instagram,UGC Video,0.142,0.0366,9.344,1542
+96,Eco-Lux Loyalists,Reactivation,Facebook,Short Video Ad,0.0986,0.1082,1.051,2995
+97,Eco-Gift Shoppers,Retention,Website Blog,GIF Ad,0.1766,0.105,24.433,3493
+98,Eco-Lux Loyalists,Conversion,TikTok,Story,0.2261,0.0248,5.917,3493
+99,Eco-Lux Loyalists,Upsell,Instagram,Reel,0.1012,0.095,17.264,1972
+100,Trend Seekers,Upsell,Website Blog,GIF Ad,0.126,0.0496,20.305,3385
+101,Budget Essentials,Conversion,Facebook,Long-form Copy,0.0647,0.0874,8.337,3983
+102,Aspiring Aesthetes,Awareness,TikTok,Blog Post,0.0228,0.0781,8.019,2339
+103,Eco-Lux Loyalists,Retention,Email,Carousel,0.1255,0.063,13.361,2142
+104,Budget Essentials,Conversion,Pinterest,Short Video Ad,0.0732,0.0609,18.087,3650
+105,Trend Seekers,Retention,Pinterest,GIF Ad,0.1739,0.0498,15.505,2221
+106,Aspiring Aesthetes,Upsell,Email,GIF Ad,0.1406,0.0121,16.854,3573
+107,Budget Essentials,Retention,Instagram,Long-form Copy,0.223,0.1042,10.016,2549
+108,Aspiring Aesthetes,Reactivation,Website Blog,GIF Ad,0.0363,0.0753,13.954,4492
+109,Aspiring Aesthetes,Conversion,Instagram,Reel,0.0895,0.0319,24.398,1585
+110,Eco-Lux Loyalists,Reactivation,Instagram,Long-form Copy,0.1452,0.018,15.467,1464
+111,Trend Seekers,Reactivation,Pinterest,Blog Post,0.0689,0.0648,21.359,1879
+112,Budget Essentials,Retention,YouTube,Short Video Ad,0.1186,0.0269,23.551,2595
+113,Budget Essentials,Conversion,YouTube,GIF Ad,0.0615,0.1197,13.683,3441
+114,Eco-Gift Shoppers,Retention,Website Blog,GIF Ad,0.1328,0.052,21.804,539
+115,Budget Essentials,Conversion,Pinterest,GIF Ad,0.0291,0.1059,16.903,3322
+116,Eco-Gift Shoppers,Reactivation,Facebook,Blog Post,0.0713,0.0945,1.493,3028
+117,Budget Essentials,Conversion,Email,Story,0.1318,0.0463,12.91,2642
+118,Aspiring Aesthetes,Reactivation,Pinterest,Blog Post,0.176,0.0704,3.908,4829
+119,Trend Seekers,Upsell,TikTok,Static Ad,0.1846,0.115,11.842,880
+120,Eco-Lux Loyalists,Retention,Website Blog,Blog Post,0.1859,0.1189,16.787,233
+121,Trend Seekers,Upsell,Email,Reel,0.2336,0.0306,13.465,4197
+122,Eco-Gift Shoppers,Reactivation,TikTok,UGC Video,0.2151,0.0971,4.871,4238
+123,Eco-Lux Loyalists,Upsell,TikTok,Short Video Ad,0.0942,0.0588,22.959,1626
+124,Aspiring Aesthetes,Awareness,Facebook,Short Video Ad,0.2181,0.0515,12.723,4503
+125,Eco-Gift Shoppers,Awareness,TikTok,GIF Ad,0.0673,0.0784,18.41,3235
+126,Budget Essentials,Reactivation,Facebook,UGC Video,0.1094,0.0177,9.464,4991
+127,Budget Essentials,Upsell,Instagram,Long-form Copy,0.1346,0.1031,21.086,4897
+128,Aspiring Aesthetes,Conversion,TikTok,Carousel,0.1121,0.0688,20.458,1416
+129,Budget Essentials,Retention,Website Blog,Story,0.2368,0.0486,24.735,2785
+130,Budget Essentials,Upsell,YouTube,Story,0.2104,0.0296,18.746,3792
+131,Eco-Lux Loyalists,Upsell,YouTube,Reel,0.1037,0.1117,20.811,2021
+132,Eco-Lux Loyalists,Awareness,Facebook,Short Video Ad,0.1505,0.1031,20.428,2910
+133,Trend Seekers,Reactivation,Pinterest,GIF Ad,0.1528,0.0329,19.428,1288
+134,Aspiring Aesthetes,Upsell,Website Blog,Carousel,0.0722,0.0102,15.795,3251
+135,Trend Seekers,Reactivation,Facebook,Static Ad,0.0737,0.1021,11.165,2159
+136,Budget Essentials,Conversion,TikTok,Long-form Copy,0.038,0.0887,14.79,1613
+137,Budget Essentials,Conversion,Instagram,Static Ad,0.2115,0.0783,4.478,3560
+138,Eco-Lux Loyalists,Upsell,Pinterest,UGC Video,0.036,0.0353,11.493,1707
+139,Eco-Lux Loyalists,Upsell,Facebook,UGC Video,0.1442,0.0755,6.58,1369
+140,Eco-Gift Shoppers,Conversion,Facebook,Carousel,0.1283,0.0167,6.012,201
+141,Trend Seekers,Conversion,Email,UGC Video,0.153,0.0586,10.108,561
+142,Trend Seekers,Reactivation,Facebook,Blog Post,0.0748,0.0993,2.483,3054
+143,Trend Seekers,Conversion,Facebook,Carousel,0.0645,0.1085,17.831,4815
+144,Eco-Gift Shoppers,Reactivation,Email,GIF Ad,0.1873,0.1112,16.873,1728
+145,Budget Essentials,Reactivation,Pinterest,Short Video Ad,0.1244,0.0699,16.875,3263
+146,Aspiring Aesthetes,Awareness,Facebook,GIF Ad,0.1403,0.0779,4.917,4664
+147,Trend Seekers,Upsell,Website Blog,Static Ad,0.2197,0.0653,22.65,358
+148,Aspiring Aesthetes,Awareness,YouTube,GIF Ad,0.1364,0.0646,1.325,2405
+149,Aspiring Aesthetes,Awareness,Website Blog,Long-form Copy,0.2252,0.0535,16.733,1351
+150,Eco-Lux Loyalists,Conversion,YouTube,Static Ad,0.0633,0.0857,2.566,1972
+151,Budget Essentials,Reactivation,TikTok,GIF Ad,0.0467,0.083,17.448,4279
+152,Aspiring Aesthetes,Reactivation,Email,Blog Post,0.1962,0.0389,18.145,3474
+153,Budget Essentials,Reactivation,Email,Static Ad,0.1499,0.0855,7.93,3944
+154,Aspiring Aesthetes,Conversion,Instagram,Reel,0.202,0.0301,24.583,595
+155,Trend Seekers,Upsell,Email,Blog Post,0.0885,0.1154,9.667,1527
+156,Budget Essentials,Upsell,Email,Static Ad,0.1349,0.0519,4.321,582
+157,Trend Seekers,Upsell,YouTube,Carousel,0.148,0.1,21.891,1065
+158,Eco-Gift Shoppers,Retention,Email,Blog Post,0.2026,0.0412,10.619,1996
+159,Budget Essentials,Reactivation,Instagram,Short Video Ad,0.1831,0.0396,9.19,951
+160,Budget Essentials,Upsell,Pinterest,GIF Ad,0.1795,0.0827,9.259,1718
+161,Trend Seekers,Awareness,YouTube,Story,0.1748,0.0932,7.319,1684
+162,Budget Essentials,Reactivation,Facebook,UGC Video,0.2123,0.1146,7.281,4156
+163,Budget Essentials,Upsell,YouTube,Carousel,0.2262,0.0249,1.964,337
+164,Eco-Gift Shoppers,Conversion,Website Blog,Static Ad,0.0404,0.1068,4.517,1006
+165,Eco-Lux Loyalists,Conversion,YouTube,UGC Video,0.1272,0.0106,3.542,4127
+166,Aspiring Aesthetes,Upsell,Website Blog,Static Ad,0.0917,0.0387,1.207,2671
+167,Eco-Gift Shoppers,Conversion,Pinterest,GIF Ad,0.2315,0.111,7.672,4327
+168,Trend Seekers,Upsell,Facebook,Carousel,0.1604,0.052,20.262,1366
+169,Eco-Lux Loyalists,Conversion,YouTube,Blog Post,0.0337,0.1016,15.931,3269
+170,Trend Seekers,Conversion,YouTube,Reel,0.157,0.0999,18.317,4067
+171,Trend Seekers,Reactivation,Instagram,UGC Video,0.194,0.03,1.62,1626
+172,Trend Seekers,Conversion,YouTube,Story,0.1424,0.099,14.431,405
+173,Eco-Lux Loyalists,Upsell,Website Blog,Long-form Copy,0.0509,0.0137,4.313,4731
+174,Eco-Gift Shoppers,Conversion,Facebook,Short Video Ad,0.0126,0.0708,13.757,1608
+175,Trend Seekers,Awareness,Website Blog,Carousel,0.1841,0.0139,22.44,1770
+176,Aspiring Aesthetes,Reactivation,YouTube,Blog Post,0.0742,0.0891,22.744,430
+177,Eco-Gift Shoppers,Reactivation,YouTube,Carousel,0.154,0.03,11.505,1920
+178,Eco-Gift Shoppers,Awareness,Instagram,UGC Video,0.1611,0.0272,15.112,4791
+179,Eco-Lux Loyalists,Reactivation,Email,Short Video Ad,0.1108,0.0168,12.786,1992
+180,Trend Seekers,Reactivation,Pinterest,Blog Post,0.237,0.0173,23.945,1158
+181,Trend Seekers,Awareness,Website Blog,Short Video Ad,0.1758,0.0275,10.739,4895
+182,Budget Essentials,Retention,TikTok,Reel,0.0358,0.03,10.232,1544
+183,Trend Seekers,Conversion,Website Blog,UGC Video,0.2217,0.0507,16.11,3484
+184,Trend Seekers,Conversion,Facebook,Story,0.2322,0.0821,18.722,1381
+185,Aspiring Aesthetes,Upsell,Instagram,UGC Video,0.1207,0.0997,10.657,2290
+186,Aspiring Aesthetes,Upsell,YouTube,Short Video Ad,0.1092,0.1006,11.731,2563
+187,Eco-Gift Shoppers,Conversion,TikTok,Reel,0.1298,0.0444,1.749,1676
+188,Trend Seekers,Conversion,TikTok,Reel,0.2366,0.0158,6.889,3637
+189,Eco-Lux Loyalists,Reactivation,Email,Reel,0.0307,0.108,4.278,622
+190,Aspiring Aesthetes,Conversion,Email,UGC Video,0.1153,0.0464,20.604,3493
+191,Eco-Gift Shoppers,Reactivation,Facebook,Carousel,0.0883,0.0766,20.879,3559
+192,Aspiring Aesthetes,Upsell,TikTok,GIF Ad,0.0539,0.0617,16.874,1076
+193,Aspiring Aesthetes,Reactivation,Website Blog,Static Ad,0.2266,0.094,17.113,496
+194,Aspiring Aesthetes,Conversion,YouTube,Story,0.1655,0.0462,24.199,2787
+195,Aspiring Aesthetes,Awareness,Facebook,Story,0.1447,0.0279,24.203,1438
+196,Trend Seekers,Awareness,Facebook,Short Video Ad,0.1689,0.1123,3.728,1704
+197,Budget Essentials,Retention,Email,Blog Post,0.1017,0.0802,19.289,2193
+198,Budget Essentials,Upsell,Facebook,Static Ad,0.2162,0.1122,5.098,2360
+199,Eco-Lux Loyalists,Awareness,Email,GIF Ad,0.2433,0.0991,9.521,3499
+200,Budget Essentials,Retention,YouTube,Static Ad,0.2082,0.109,19.387,1626
+201,Aspiring Aesthetes,Reactivation,Email,Static Ad,0.2052,0.0763,10.3,1004
+202,Aspiring Aesthetes,Retention,YouTube,Short Video Ad,0.0208,0.0793,19.697,2154
+203,Budget Essentials,Reactivation,Pinterest,Static Ad,0.0716,0.0941,15.228,4092
+204,Trend Seekers,Upsell,Instagram,Blog Post,0.2296,0.0247,19.276,2683
+205,Trend Seekers,Retention,Email,Story,0.0996,0.0267,13.949,2893
+206,Budget Essentials,Retention,Instagram,UGC Video,0.1663,0.0658,6.616,483
+207,Trend Seekers,Retention,TikTok,Reel,0.0715,0.0112,1.793,3272
+208,Eco-Gift Shoppers,Retention,Facebook,Static Ad,0.0206,0.0427,6.407,1746
+209,Budget Essentials,Upsell,TikTok,UGC Video,0.0246,0.0881,1.725,3308
+210,Trend Seekers,Retention,Pinterest,Story,0.0978,0.0582,12.869,1906
+211,Eco-Lux Loyalists,Reactivation,TikTok,Story,0.0132,0.0517,8.383,1037
+212,Aspiring Aesthetes,Retention,Instagram,Static Ad,0.2296,0.0895,11.558,4165
+213,Eco-Lux Loyalists,Upsell,Instagram,Blog Post,0.1322,0.0462,21.047,4903
+214,Eco-Lux Loyalists,Conversion,Website Blog,GIF Ad,0.1739,0.0822,14.696,4007
+215,Budget Essentials,Upsell,Instagram,Carousel,0.1445,0.113,21.79,3264
+216,Eco-Lux Loyalists,Awareness,Email,Carousel,0.1001,0.0212,20.884,3866
+217,Eco-Lux Loyalists,Reactivation,Pinterest,Long-form Copy,0.212,0.0932,11.732,2897
+218,Budget Essentials,Retention,Facebook,Blog Post,0.0381,0.075,9.071,4325
+219,Aspiring Aesthetes,Retention,TikTok,Story,0.0708,0.041,9.018,3007
+220,Aspiring Aesthetes,Conversion,Pinterest,UGC Video,0.2032,0.0609,16.737,4442
+221,Eco-Lux Loyalists,Awareness,Pinterest,Long-form Copy,0.0488,0.0892,21.749,3557
+222,Eco-Lux Loyalists,Upsell,Facebook,Carousel,0.0922,0.1043,18.61,1080
+223,Aspiring Aesthetes,Upsell,Email,GIF Ad,0.1248,0.1092,13.232,1176
+224,Trend Seekers,Conversion,YouTube,Carousel,0.1249,0.0799,8.248,2275
+225,Eco-Lux Loyalists,Retention,Instagram,UGC Video,0.2473,0.0728,16.731,3576
+226,Eco-Gift Shoppers,Upsell,Email,Short Video Ad,0.2036,0.0609,19.803,2928
+227,Aspiring Aesthetes,Awareness,TikTok,Static Ad,0.0216,0.0647,14.176,3830
+228,Aspiring Aesthetes,Awareness,TikTok,Reel,0.0719,0.0258,5.317,4632
+229,Eco-Gift Shoppers,Reactivation,Email,Carousel,0.0696,0.1057,14.248,1318
+230,Trend Seekers,Awareness,Email,Short Video Ad,0.209,0.0464,12.328,3621
+231,Eco-Gift Shoppers,Reactivation,Email,Blog Post,0.1266,0.057,18.524,2523
+232,Aspiring Aesthetes,Reactivation,Pinterest,GIF Ad,0.1981,0.0593,23.979,2380
+233,Budget Essentials,Retention,Facebook,Blog Post,0.0963,0.0343,21.062,3925
+234,Eco-Lux Loyalists,Conversion,Website Blog,Reel,0.0381,0.0677,3.269,4752
+235,Eco-Gift Shoppers,Upsell,Instagram,Static Ad,0.1318,0.0664,9.326,1841
+236,Eco-Lux Loyalists,Reactivation,Website Blog,Story,0.2018,0.061,20.438,801
+237,Eco-Gift Shoppers,Awareness,Instagram,Story,0.1042,0.1086,18.13,3006
+238,Trend Seekers,Retention,Instagram,Story,0.088,0.0872,15.941,1390
+239,Budget Essentials,Retention,Instagram,Short Video Ad,0.0501,0.0255,5.747,4074
+240,Budget Essentials,Conversion,Website Blog,Static Ad,0.224,0.0184,10.591,1093
+241,Budget Essentials,Upsell,Website Blog,Static Ad,0.2321,0.0788,23.764,1394
+242,Aspiring Aesthetes,Upsell,Pinterest,Short Video Ad,0.0401,0.0864,24.735,1214
+243,Trend Seekers,Retention,Website Blog,Short Video Ad,0.1454,0.0116,10.043,4355
+244,Aspiring Aesthetes,Reactivation,TikTok,UGC Video,0.1484,0.0258,8.11,1873
+245,Trend Seekers,Conversion,Instagram,Short Video Ad,0.1442,0.0174,5.497,1345
+246,Aspiring Aesthetes,Retention,Instagram,Carousel,0.0104,0.0248,21.423,4468
+247,Eco-Lux Loyalists,Conversion,Instagram,Reel,0.1186,0.0467,4.829,3923
+248,Aspiring Aesthetes,Upsell,Email,UGC Video,0.0947,0.0183,7.813,4969
+249,Aspiring Aesthetes,Awareness,TikTok,GIF Ad,0.0803,0.032,15.071,3399
+250,Eco-Lux Loyalists,Awareness,Email,Short Video Ad,0.2421,0.04,18.259,4055
+251,Aspiring Aesthetes,Conversion,Pinterest,Blog Post,0.2269,0.1002,24.106,313
+252,Eco-Lux Loyalists,Upsell,Email,UGC Video,0.0993,0.0805,12.981,4636
+253,Budget Essentials,Awareness,Facebook,Static Ad,0.1268,0.0182,6.934,942
+254,Budget Essentials,Reactivation,Pinterest,UGC Video,0.1428,0.0374,4.235,2933
+255,Aspiring Aesthetes,Reactivation,Facebook,Blog Post,0.0357,0.0851,3.18,3659
+256,Aspiring Aesthetes,Conversion,Pinterest,GIF Ad,0.2482,0.0336,7.448,1440
+257,Trend Seekers,Conversion,Pinterest,Carousel,0.0906,0.056,16.526,1029
+258,Trend Seekers,Conversion,Instagram,Story,0.1689,0.0625,11.833,4112
+259,Eco-Lux Loyalists,Upsell,Website Blog,Short Video Ad,0.0856,0.0779,4.269,4504
+260,Eco-Lux Loyalists,Upsell,Email,GIF Ad,0.1627,0.038,9.072,3991
+261,Trend Seekers,Conversion,TikTok,GIF Ad,0.0302,0.1098,2.225,4671
+262,Aspiring Aesthetes,Upsell,YouTube,Reel,0.1237,0.0134,12.069,1049
+263,Budget Essentials,Conversion,Email,Carousel,0.1338,0.1184,20.332,2674
+264,Budget Essentials,Upsell,Website Blog,Carousel,0.0478,0.0741,6.178,4025
+265,Eco-Gift Shoppers,Conversion,Pinterest,Short Video Ad,0.16,0.069,22.351,4147
+266,Eco-Gift Shoppers,Awareness,TikTok,Blog Post,0.1331,0.0185,21.016,4481
+267,Trend Seekers,Retention,Pinterest,Long-form Copy,0.0557,0.0518,9.749,4406
+268,Aspiring Aesthetes,Conversion,Pinterest,Story,0.241,0.0495,11.414,3073
+269,Aspiring Aesthetes,Reactivation,TikTok,Blog Post,0.0415,0.0674,4.348,2662
+270,Eco-Gift Shoppers,Reactivation,Pinterest,Short Video Ad,0.1778,0.0737,24.703,224
+271,Aspiring Aesthetes,Retention,Website Blog,GIF Ad,0.0229,0.098,4.883,839
+272,Eco-Gift Shoppers,Upsell,Pinterest,Reel,0.0423,0.0545,16.433,3224
+273,Eco-Gift Shoppers,Reactivation,Website Blog,Long-form Copy,0.0316,0.0748,13.42,1702
+274,Aspiring Aesthetes,Conversion,YouTube,UGC Video,0.0454,0.0195,16.793,3769
+275,Trend Seekers,Reactivation,Email,GIF Ad,0.0785,0.0319,8.578,3416
+276,Trend Seekers,Retention,Instagram,Story,0.1597,0.0528,19.113,4807
+277,Trend Seekers,Reactivation,Email,Carousel,0.075,0.0753,17.034,1165
+278,Trend Seekers,Upsell,Website Blog,Blog Post,0.0398,0.0992,4.36,1258
+279,Aspiring Aesthetes,Reactivation,Pinterest,Long-form Copy,0.0286,0.0696,7.431,1015
+280,Budget Essentials,Upsell,Pinterest,Blog Post,0.0239,0.0431,2.705,1158
+281,Eco-Gift Shoppers,Upsell,Website Blog,Reel,0.0259,0.1118,8.945,355
+282,Eco-Gift Shoppers,Conversion,Pinterest,Static Ad,0.1608,0.0274,10.443,1074
+283,Eco-Lux Loyalists,Reactivation,Pinterest,Short Video Ad,0.2176,0.0131,15.308,4698
+284,Budget Essentials,Retention,TikTok,Story,0.2119,0.0687,20.345,3864
+285,Trend Seekers,Conversion,YouTube,UGC Video,0.1006,0.0921,3.888,3447
+286,Trend Seekers,Upsell,Website Blog,GIF Ad,0.0164,0.0955,22.656,4548
+287,Aspiring Aesthetes,Upsell,Website Blog,Blog Post,0.2431,0.1124,9.819,3700
+288,Aspiring Aesthetes,Awareness,Pinterest,Long-form Copy,0.0765,0.0165,24.143,2930
+289,Eco-Lux Loyalists,Conversion,Facebook,GIF Ad,0.2086,0.0777,17.57,967
+290,Eco-Gift Shoppers,Awareness,TikTok,GIF Ad,0.033,0.0377,11.042,1680
+291,Eco-Gift Shoppers,Reactivation,TikTok,Blog Post,0.0895,0.0657,2.564,903
+292,Budget Essentials,Awareness,TikTok,Long-form Copy,0.1963,0.0762,7.226,4430
+293,Aspiring Aesthetes,Conversion,Instagram,Story,0.1718,0.0364,6.205,3759
+294,Trend Seekers,Awareness,YouTube,Static Ad,0.0318,0.0203,24.169,2668
+295,Budget Essentials,Retention,Email,Short Video Ad,0.0885,0.0525,22.082,4596
+296,Trend Seekers,Retention,Instagram,GIF Ad,0.1961,0.0781,11.881,3440
+297,Eco-Lux Loyalists,Upsell,YouTube,GIF Ad,0.0559,0.0186,21.519,1076
+298,Budget Essentials,Retention,Instagram,Reel,0.1573,0.074,1.569,1646
+299,Aspiring Aesthetes,Awareness,Instagram,Static Ad,0.1359,0.0896,21.794,1593
+300,Budget Essentials,Retention,Email,Static Ad,0.1759,0.0461,7.198,4222
+301,Trend Seekers,Retention,Instagram,GIF Ad,0.1835,0.1001,10.372,2234
+302,Budget Essentials,Awareness,Email,Reel,0.0114,0.0543,5.151,3273
+303,Trend Seekers,Retention,Website Blog,Short Video Ad,0.1491,0.0618,0.84,4010
+304,Budget Essentials,Awareness,TikTok,Short Video Ad,0.0102,0.0631,15.953,1583
+305,Aspiring Aesthetes,Awareness,Email,Carousel,0.1412,0.0543,9.789,891
+306,Eco-Lux Loyalists,Retention,Pinterest,Short Video Ad,0.128,0.0243,1.114,2167
+307,Budget Essentials,Retention,Email,Long-form Copy,0.1199,0.0307,7.134,4039
+308,Budget Essentials,Reactivation,Pinterest,Story,0.2421,0.076,12.829,3574
+309,Eco-Gift Shoppers,Awareness,Facebook,Story,0.2238,0.0874,2.372,435
+310,Eco-Gift Shoppers,Conversion,Email,Story,0.2383,0.0178,11.74,1423
+311,Eco-Gift Shoppers,Conversion,Email,Long-form Copy,0.2143,0.0196,9.467,3092
+312,Aspiring Aesthetes,Retention,Website Blog,Long-form Copy,0.1968,0.0813,19.374,2940
+313,Eco-Lux Loyalists,Retention,Facebook,Reel,0.1295,0.0632,18.127,2495
+314,Budget Essentials,Awareness,TikTok,Reel,0.0295,0.1117,7.231,695
+315,Eco-Gift Shoppers,Retention,Instagram,Story,0.1225,0.0705,16.114,4641
+316,Aspiring Aesthetes,Reactivation,Facebook,Short Video Ad,0.2139,0.0753,20.701,2191
+317,Eco-Gift Shoppers,Retention,YouTube,Reel,0.1101,0.0426,10.784,3992
+318,Trend Seekers,Awareness,Website Blog,UGC Video,0.1254,0.0796,8.749,2096
+319,Trend Seekers,Conversion,Email,Long-form Copy,0.0117,0.0361,22.453,2674
+320,Trend Seekers,Upsell,Pinterest,Static Ad,0.0238,0.0901,17.03,1267
+321,Aspiring Aesthetes,Conversion,Instagram,Long-form Copy,0.0996,0.1147,6.032,2367
+322,Budget Essentials,Reactivation,Facebook,Reel,0.1523,0.063,16.967,856
+323,Eco-Gift Shoppers,Conversion,Pinterest,UGC Video,0.2157,0.0757,15.549,4942
+324,Eco-Lux Loyalists,Upsell,Email,GIF Ad,0.1926,0.0539,7.085,2501
+325,Trend Seekers,Awareness,Email,Reel,0.0239,0.1159,16.266,310
+326,Eco-Lux Loyalists,Conversion,Website Blog,Static Ad,0.2219,0.0969,23.215,3009
+327,Aspiring Aesthetes,Conversion,Website Blog,GIF Ad,0.2253,0.0445,10.218,1799
+328,Trend Seekers,Upsell,Facebook,Story,0.1219,0.0776,6.436,4127
+329,Eco-Lux Loyalists,Conversion,Website Blog,Long-form Copy,0.0676,0.097,13.002,1085
+330,Budget Essentials,Upsell,YouTube,Blog Post,0.1142,0.0479,7.864,1790
+331,Eco-Gift Shoppers,Upsell,Email,Story,0.0241,0.085,18.551,1604
+332,Aspiring Aesthetes,Awareness,Email,Carousel,0.1138,0.078,12.342,3476
+333,Aspiring Aesthetes,Awareness,Facebook,Short Video Ad,0.0362,0.1192,16.539,2879
+334,Eco-Lux Loyalists,Reactivation,YouTube,Story,0.0229,0.0219,15.312,468
+335,Budget Essentials,Awareness,Facebook,Static Ad,0.1805,0.0981,7.057,4379
+336,Aspiring Aesthetes,Upsell,Instagram,Carousel,0.2243,0.0608,19.488,1617
+337,Trend Seekers,Awareness,YouTube,Story,0.0461,0.0251,20.257,353
+338,Eco-Lux Loyalists,Conversion,Website Blog,Story,0.0147,0.0659,6.648,1689
+339,Aspiring Aesthetes,Awareness,YouTube,GIF Ad,0.1742,0.0783,20.533,2614
+340,Trend Seekers,Reactivation,Pinterest,Static Ad,0.2306,0.1108,7.481,251
+341,Aspiring Aesthetes,Reactivation,Facebook,Short Video Ad,0.185,0.0546,8.479,2269
+342,Eco-Lux Loyalists,Reactivation,Pinterest,Blog Post,0.2165,0.0225,8.84,2953
+343,Eco-Lux Loyalists,Upsell,Instagram,GIF Ad,0.02,0.0583,21.71,2776
+344,Aspiring Aesthetes,Retention,TikTok,Blog Post,0.0724,0.1178,18.891,4855
+345,Aspiring Aesthetes,Retention,YouTube,Long-form Copy,0.2313,0.0421,2.461,370
+346,Trend Seekers,Upsell,Pinterest,Blog Post,0.2145,0.0387,13.881,2999
+347,Budget Essentials,Retention,TikTok,GIF Ad,0.0725,0.0198,9.474,2721
+348,Eco-Lux Loyalists,Awareness,Instagram,GIF Ad,0.121,0.0845,12.355,4542
+349,Eco-Gift Shoppers,Conversion,Pinterest,Blog Post,0.1351,0.0871,11.555,3785
+350,Aspiring Aesthetes,Reactivation,TikTok,Blog Post,0.2331,0.0138,2.724,3225
+351,Aspiring Aesthetes,Retention,TikTok,Story,0.0674,0.0837,24.459,4555
+352,Budget Essentials,Awareness,Website Blog,Carousel,0.132,0.1036,14.024,4658
+353,Budget Essentials,Conversion,TikTok,Long-form Copy,0.2125,0.0571,9.487,4875
+354,Trend Seekers,Upsell,Website Blog,Blog Post,0.2447,0.1033,21.865,1941
+355,Trend Seekers,Upsell,Facebook,Story,0.0717,0.0496,22.074,2398
+356,Aspiring Aesthetes,Conversion,Website Blog,Reel,0.2264,0.0343,3.212,723
+357,Trend Seekers,Awareness,Email,Static Ad,0.1462,0.0814,18.986,4154
+358,Trend Seekers,Upsell,Instagram,Long-form Copy,0.0278,0.0478,10.547,2613
+359,Eco-Gift Shoppers,Conversion,TikTok,Static Ad,0.1445,0.0539,3.182,3958
+360,Aspiring Aesthetes,Conversion,Pinterest,UGC Video,0.1866,0.1022,14.245,2515
+361,Eco-Gift Shoppers,Conversion,YouTube,Reel,0.0492,0.1155,13.389,4699
+362,Trend Seekers,Upsell,Pinterest,Carousel,0.0548,0.0408,12.427,3061
+363,Eco-Gift Shoppers,Awareness,Email,Reel,0.0866,0.0445,7.826,4833
+364,Aspiring Aesthetes,Conversion,Instagram,Carousel,0.1368,0.0876,16.858,3124
+365,Eco-Gift Shoppers,Retention,Instagram,Static Ad,0.1713,0.0816,22.67,3160
+366,Eco-Gift Shoppers,Awareness,Email,GIF Ad,0.1145,0.0984,23.407,2048
+367,Eco-Gift Shoppers,Upsell,Pinterest,Reel,0.1337,0.0844,2.184,1685
+368,Trend Seekers,Awareness,Facebook,Reel,0.0758,0.0962,19.173,1862
+369,Eco-Lux Loyalists,Conversion,TikTok,GIF Ad,0.076,0.0569,3.763,4367
+370,Budget Essentials,Awareness,Instagram,GIF Ad,0.1907,0.0101,15.782,4967
+371,Aspiring Aesthetes,Conversion,Instagram,Long-form Copy,0.2236,0.0128,5.047,4699
+372,Eco-Gift Shoppers,Conversion,Facebook,Carousel,0.1211,0.0614,24.341,3581
+373,Trend Seekers,Reactivation,Website Blog,Short Video Ad,0.2024,0.0277,15.598,2667
+374,Trend Seekers,Conversion,Pinterest,Carousel,0.1831,0.0131,5.411,3367
+375,Aspiring Aesthetes,Retention,Email,Story,0.0545,0.0682,4.993,314
+376,Trend Seekers,Conversion,YouTube,Story,0.2134,0.0304,20.375,716
+377,Eco-Lux Loyalists,Retention,Facebook,GIF Ad,0.1996,0.1171,9.505,901
+378,Eco-Lux Loyalists,Retention,YouTube,GIF Ad,0.1584,0.074,2.331,622
+379,Aspiring Aesthetes,Upsell,Facebook,Long-form Copy,0.0677,0.0721,18.835,487
+380,Aspiring Aesthetes,Conversion,YouTube,Carousel,0.2382,0.065,16.792,3789
+381,Eco-Gift Shoppers,Awareness,Email,Story,0.2463,0.0202,16.795,3168
+382,Eco-Lux Loyalists,Retention,Pinterest,GIF Ad,0.1956,0.0783,9.345,1488
+383,Trend Seekers,Retention,Pinterest,Short Video Ad,0.0124,0.0596,10.625,4365
+384,Eco-Lux Loyalists,Upsell,Website Blog,Story,0.0169,0.1017,11.551,3987
+385,Aspiring Aesthetes,Conversion,Pinterest,Story,0.2415,0.1029,13.757,3155
+386,Aspiring Aesthetes,Awareness,YouTube,Carousel,0.227,0.1176,18.061,2731
+387,Aspiring Aesthetes,Conversion,Instagram,GIF Ad,0.0468,0.0975,16.498,1900
+388,Eco-Gift Shoppers,Reactivation,TikTok,Blog Post,0.1497,0.081,12.073,4546
+389,Eco-Lux Loyalists,Upsell,TikTok,Story,0.2342,0.0965,4.647,3030
+390,Eco-Lux Loyalists,Awareness,Website Blog,Reel,0.0566,0.0377,17.231,2418
+391,Budget Essentials,Reactivation,Website Blog,Blog Post,0.0112,0.0244,1.014,3684
+392,Eco-Gift Shoppers,Awareness,Facebook,Reel,0.0279,0.0639,0.906,3336
+393,Aspiring Aesthetes,Conversion,Website Blog,Long-form Copy,0.2333,0.0636,1.333,4669
+394,Eco-Gift Shoppers,Conversion,Email,Story,0.2254,0.0524,24.624,2764
+395,Eco-Gift Shoppers,Upsell,Pinterest,Blog Post,0.1341,0.0569,14.192,3387
+396,Trend Seekers,Conversion,Facebook,Story,0.0139,0.1198,18.636,3547
+397,Eco-Lux Loyalists,Conversion,TikTok,GIF Ad,0.0223,0.0631,21.135,2351
+398,Eco-Lux Loyalists,Reactivation,Facebook,Reel,0.1567,0.0637,10.449,1439
+399,Trend Seekers,Retention,Instagram,Long-form Copy,0.1876,0.0602,8.387,3293
+400,Aspiring Aesthetes,Conversion,Website Blog,Reel,0.1041,0.0679,18.704,259
+401,Budget Essentials,Awareness,Pinterest,Reel,0.2213,0.037,18.691,4656
+402,Budget Essentials,Retention,Facebook,Static Ad,0.0247,0.0622,9.404,3388
+403,Budget Essentials,Reactivation,Facebook,Blog Post,0.1081,0.1088,12.839,1290
+404,Trend Seekers,Reactivation,TikTok,Static Ad,0.204,0.0423,24.925,4873
+405,Aspiring Aesthetes,Awareness,Pinterest,Short Video Ad,0.1139,0.0423,17.283,2694
+406,Budget Essentials,Conversion,Pinterest,Story,0.1647,0.0533,13.125,205
+407,Eco-Gift Shoppers,Reactivation,YouTube,Blog Post,0.2171,0.012,23.686,4081
+408,Aspiring Aesthetes,Upsell,Email,Blog Post,0.2323,0.0944,8.652,2604
+409,Eco-Lux Loyalists,Conversion,Facebook,Static Ad,0.1417,0.0115,21.65,4379
+410,Eco-Lux Loyalists,Retention,YouTube,UGC Video,0.1528,0.0909,16.663,587
+411,Eco-Gift Shoppers,Conversion,Website Blog,Blog Post,0.0437,0.033,3.64,3437
+412,Eco-Lux Loyalists,Reactivation,TikTok,Carousel,0.0552,0.0871,1.584,340
+413,Budget Essentials,Upsell,Instagram,Reel,0.1212,0.1168,16.016,4875
+414,Eco-Gift Shoppers,Upsell,Email,Carousel,0.0564,0.0985,21.443,1667
+415,Aspiring Aesthetes,Reactivation,Instagram,Reel,0.0911,0.0121,20.323,4539
+416,Aspiring Aesthetes,Awareness,Facebook,Carousel,0.1952,0.0162,14.254,913
+417,Aspiring Aesthetes,Reactivation,Email,Static Ad,0.2289,0.0738,12.965,3882
+418,Aspiring Aesthetes,Retention,Facebook,Reel,0.0781,0.0874,12.273,1946
+419,Budget Essentials,Conversion,Email,Reel,0.0261,0.0918,21.875,2700
+420,Aspiring Aesthetes,Reactivation,Website Blog,Carousel,0.0254,0.0897,16.698,1311
+421,Eco-Lux Loyalists,Conversion,Facebook,Short Video Ad,0.0926,0.1023,0.767,1140
+422,Eco-Lux Loyalists,Awareness,Instagram,UGC Video,0.212,0.0619,18.654,3796
+423,Aspiring Aesthetes,Upsell,YouTube,Carousel,0.2385,0.1189,12.62,402
+424,Budget Essentials,Awareness,Facebook,Static Ad,0.2495,0.1112,0.553,1213
+425,Aspiring Aesthetes,Awareness,YouTube,Short Video Ad,0.0159,0.0696,3.079,2508
+426,Eco-Lux Loyalists,Conversion,Website Blog,GIF Ad,0.2279,0.0977,16.57,2722
+427,Budget Essentials,Reactivation,Instagram,Static Ad,0.2062,0.0374,20.226,4859
+428,Eco-Lux Loyalists,Upsell,Instagram,Carousel,0.1551,0.045,9.373,2043
+429,Eco-Lux Loyalists,Upsell,Instagram,Short Video Ad,0.2203,0.0985,12.895,3093
+430,Eco-Lux Loyalists,Retention,Pinterest,Carousel,0.1836,0.1101,21.966,325
+431,Eco-Lux Loyalists,Upsell,TikTok,Long-form Copy,0.0693,0.0737,9.282,976
+432,Budget Essentials,Retention,Instagram,Carousel,0.2243,0.0489,22.423,4226
+433,Eco-Lux Loyalists,Conversion,Instagram,UGC Video,0.0867,0.0882,11.665,4668
+434,Aspiring Aesthetes,Reactivation,Website Blog,UGC Video,0.2457,0.0511,1.92,1779
+435,Trend Seekers,Conversion,TikTok,Short Video Ad,0.1418,0.0972,7.026,2927
+436,Aspiring Aesthetes,Upsell,Facebook,Long-form Copy,0.0215,0.037,3.675,1804
+437,Trend Seekers,Upsell,TikTok,GIF Ad,0.0484,0.0417,23.077,253
+438,Aspiring Aesthetes,Retention,Email,Story,0.1355,0.0653,22.106,1695
+439,Aspiring Aesthetes,Upsell,Facebook,Short Video Ad,0.1167,0.1142,5.084,996
+440,Trend Seekers,Reactivation,TikTok,Static Ad,0.0283,0.0729,23.261,4699
+441,Eco-Lux Loyalists,Retention,Email,UGC Video,0.0905,0.053,13.178,2215
+442,Trend Seekers,Conversion,Website Blog,Story,0.1111,0.0278,1.447,2965
+443,Aspiring Aesthetes,Reactivation,Pinterest,Static Ad,0.074,0.0115,10.057,3627
+444,Budget Essentials,Retention,Instagram,GIF Ad,0.1204,0.0555,15.959,2456
+445,Eco-Lux Loyalists,Conversion,Facebook,Reel,0.2442,0.0149,20.579,2996
+446,Budget Essentials,Upsell,TikTok,Short Video Ad,0.1711,0.103,20.843,215
+447,Trend Seekers,Retention,Instagram,Static Ad,0.0453,0.0454,6.81,1850
+448,Eco-Lux Loyalists,Awareness,YouTube,Static Ad,0.1023,0.069,7.023,3347
+449,Eco-Lux Loyalists,Awareness,TikTok,Reel,0.1589,0.0603,24.248,3747
+450,Eco-Lux Loyalists,Retention,Website Blog,Story,0.1789,0.1089,16.892,1765
+451,Eco-Gift Shoppers,Reactivation,TikTok,Blog Post,0.2099,0.0852,16.042,1237
+452,Eco-Lux Loyalists,Upsell,Email,Blog Post,0.2461,0.0661,10.984,709
+453,Aspiring Aesthetes,Awareness,Website Blog,Carousel,0.1042,0.1163,5.285,3743
+454,Budget Essentials,Retention,TikTok,Static Ad,0.2257,0.0445,14.376,3195
+455,Eco-Gift Shoppers,Awareness,Pinterest,Blog Post,0.2311,0.0254,0.689,4896
+456,Trend Seekers,Awareness,Facebook,Long-form Copy,0.1719,0.0615,7.976,544
+457,Eco-Gift Shoppers,Upsell,Email,Story,0.1725,0.1118,18.798,4438
+458,Eco-Lux Loyalists,Upsell,Instagram,Short Video Ad,0.234,0.015,0.727,4552
+459,Eco-Gift Shoppers,Awareness,YouTube,Carousel,0.0219,0.0994,17.775,4607
+460,Trend Seekers,Retention,TikTok,Long-form Copy,0.17,0.0432,18.66,4321
+461,Eco-Lux Loyalists,Upsell,Instagram,Carousel,0.1622,0.0655,14.669,4801
+462,Eco-Lux Loyalists,Retention,Email,GIF Ad,0.0284,0.0613,14.811,4230
+463,Eco-Gift Shoppers,Retention,Facebook,UGC Video,0.1121,0.1033,7.993,1751
+464,Eco-Lux Loyalists,Reactivation,TikTok,Story,0.1993,0.059,23.477,4562
+465,Budget Essentials,Retention,Instagram,UGC Video,0.1237,0.0182,11.654,2097
+466,Trend Seekers,Reactivation,Facebook,Long-form Copy,0.1629,0.0751,22.046,2504
+467,Eco-Lux Loyalists,Reactivation,Instagram,Story,0.1664,0.0329,21.116,1063
+468,Trend Seekers,Retention,Facebook,Blog Post,0.168,0.0553,11.58,1389
+469,Eco-Lux Loyalists,Reactivation,TikTok,Blog Post,0.0847,0.0908,0.689,2924
+470,Aspiring Aesthetes,Reactivation,Email,UGC Video,0.1976,0.0844,13.235,1825
+471,Budget Essentials,Awareness,Email,Carousel,0.0909,0.0985,21.333,1494
+472,Eco-Gift Shoppers,Upsell,Instagram,UGC Video,0.0973,0.0391,18.609,2268
+473,Trend Seekers,Reactivation,Facebook,GIF Ad,0.0999,0.0239,8.904,3455
+474,Aspiring Aesthetes,Retention,TikTok,Static Ad,0.129,0.0229,10.726,3325
+475,Aspiring Aesthetes,Upsell,YouTube,GIF Ad,0.1206,0.1152,15.647,2907
+476,Budget Essentials,Retention,Pinterest,Static Ad,0.2309,0.0448,16.093,4301
+477,Eco-Gift Shoppers,Retention,TikTok,Static Ad,0.1535,0.1192,13.006,4594
+478,Trend Seekers,Reactivation,Facebook,Short Video Ad,0.0753,0.0814,16.721,272
+479,Eco-Lux Loyalists,Awareness,TikTok,Static Ad,0.2414,0.1018,2.255,2915
+480,Aspiring Aesthetes,Reactivation,YouTube,Long-form Copy,0.1663,0.1186,11.904,2067
+481,Aspiring Aesthetes,Retention,Facebook,Short Video Ad,0.1189,0.0718,6.695,2722
+482,Aspiring Aesthetes,Retention,Pinterest,Story,0.0175,0.0962,9.8,2610
+483,Budget Essentials,Awareness,Pinterest,Reel,0.1442,0.072,20.795,2245
+484,Trend Seekers,Retention,Pinterest,Story,0.1968,0.1112,21.477,4980
+485,Eco-Gift Shoppers,Retention,YouTube,Reel,0.1986,0.0169,23.174,1571
+486,Eco-Gift Shoppers,Upsell,Website Blog,Long-form Copy,0.1327,0.083,3.651,2352
+487,Eco-Lux Loyalists,Conversion,Pinterest,Reel,0.0491,0.0808,0.699,2101
+488,Eco-Gift Shoppers,Upsell,TikTok,Story,0.1802,0.0708,2.237,1937
+489,Trend Seekers,Conversion,Website Blog,UGC Video,0.0927,0.0941,17.498,3471
+490,Budget Essentials,Awareness,TikTok,Short Video Ad,0.0451,0.0864,22.108,2494
+491,Aspiring Aesthetes,Reactivation,Pinterest,Static Ad,0.2418,0.1051,17.491,2701
+492,Budget Essentials,Retention,YouTube,Long-form Copy,0.1386,0.1037,10.505,4950
+493,Eco-Lux Loyalists,Upsell,Website Blog,Long-form Copy,0.2331,0.0999,6.36,2158
+494,Eco-Lux Loyalists,Reactivation,Facebook,Story,0.2399,0.0227,4.501,1130
+495,Trend Seekers,Reactivation,YouTube,Story,0.1494,0.0521,5.051,816
+496,Trend Seekers,Conversion,Instagram,Story,0.1311,0.0779,15.253,421
+497,Trend Seekers,Conversion,Website Blog,Reel,0.1939,0.0277,10.673,3469
+498,Trend Seekers,Upsell,Pinterest,Carousel,0.0832,0.1054,0.535,2433
+499,Eco-Lux Loyalists,Awareness,TikTok,UGC Video,0.0755,0.024,15.96,3834
+500,Budget Essentials,Conversion,YouTube,GIF Ad,0.1764,0.0859,10.822,3332

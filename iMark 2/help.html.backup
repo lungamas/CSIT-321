@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iMark • Help</title>
+  <style>
+    :root{
+      --gradient-dark:#131613;
+      --gradient-light:#138C3D;
+      --accent:#16A348;
+      --accent-dark:#0f7f33;
+      --grey-bar:#666D66;
+      --sidebar:#b8b8b8;
+      --glow:#16a348;
+      --text:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",Arial,sans-serif}
+    body{
+      background:linear-gradient(145deg,var(--gradient-dark) 25%,var(--gradient-light) 100%);
+      color:var(--text);min-height:100vh;overflow-x:hidden;
+    }
+
+    .topbar{
+      position:fixed;top:0;left:0;right:0;height:55px;background:var(--grey-bar);
+      display:flex;align-items:center;justify-content:flex-end;padding-right:50px;gap:40px;z-index:5;
+    }
+    .topbar a{color:#fff;text-decoration:none;font-weight:600;transition:color .25s}
+    .topbar a:hover{color:var(--accent)}
+    .topbar a.active{color:var(--accent)}
+
+    .sidebar{
+      position:fixed;top:55px;left:0;bottom:0;width:230px;background:var(--sidebar);
+      padding:25px 20px;display:flex;flex-direction:column;justify-content:space-between;z-index:6;
+      border-top:4px solid var(--glow);border-right:4px solid var(--glow);border-bottom:4px solid var(--glow);border-left:none;
+      box-shadow:5px 0 25px rgba(22,163,72,.7);border-radius:0 15px 15px 0;
+    }
+    .logo{display:flex;justify-content:center;margin-bottom:60px}
+    .logo img{height:60px;width:auto}
+    .nav-links{display:flex;flex-direction:column;gap:25px}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:10px;transition:color .25s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links img.icon{width:22px;height:22px}
+    .logout a{color:#fff;font-weight:bold;text-decoration:none;transition:color .25s}
+    .logout a:hover{color:var(--accent)}
+
+    .bg-logo{
+      position:fixed;inset:0;display:flex;justify-content:center;align-items:center;z-index:0;
+      opacity:.15;filter:blur(3px);pointer-events:none;
+    }
+    .bg-logo img{width:1500px;height:auto}
+
+    main{
+      margin-left:230px;                
+      margin-top:55px;                  
+      min-height:calc(100vh - 55px);
+      padding:80px 60px 100px;
+      position:relative;z-index:2;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+
+    .help-frame{
+      max-width:1100px;width:100%;
+      background: radial-gradient(1200px 800px at 30% 20%, #0b3d25 0%, #062015 55%, #051a12 100%);
+      border:1px solid #183024;border-radius:22px;
+      padding:36px 28px 44px;color:#d7fbe6;
+      box-shadow:0 16px 44px rgba(0,0,0,.35) inset, 0 8px 24px rgba(0,0,0,.35);
+    }
+    .help-badge{
+      width:max-content;margin:0 auto 20px;padding:16px 28px;border-radius:26px;
+      background:#2f3b35;color:#7FE28F;font-weight:900;letter-spacing:.08em;
+    }
+    .help-title{
+      text-align:center;font-size:40px;line-height:1.1;margin:6px 0 28px;
+      font-weight:900;color:#c7f9cc;text-decoration:underline;text-underline-offset:8px;
+    }
+
+    .help-list{list-style:none;padding-left:0;margin-top:6px}
+    .help-item{margin:24px 0}
+    .help-item h3{font-size:28px;font-weight:900;color:#eafff0;margin:0 0 10px}
+    .help-item p{font-size:20px;line-height:1.75;color:#cfe9dc;margin:0}
+    .help-em{font-style:italic;opacity:.95}
+
+    footer{
+      position:fixed;right:20px;bottom:15px;font-size:12px;color:#ccc;letter-spacing:.03em;
+    }
+
+    .ai-fab{
+      position:fixed;right:24px;bottom:24px;z-index:20;
+      background:var(--accent);color:#062015;font-weight:800;border:none;border-radius:999px;
+      padding:14px 20px;box-shadow:0 10px 30px rgba(0,0,0,.35);cursor:pointer;
+    }
+    .ai-fab:hover{filter:brightness(1.05)}
+
+    .chat-panel{
+      position:fixed;right:16px;z-index:30;
+      width:min(480px,94vw);height:65vh;max-height:720px;
+      background:#ffffff;border-radius:20px;overflow:hidden;
+      box-shadow:0 18px 50px rgba(0,0,0,.45);display:none;flex-direction:column;
+      border:2px solid #e7f4ed;
+
+      bottom:24px;   
+      top:auto;      
+    }
+    .chat-header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 16px;border-bottom:2px solid #16a34822;
+      background:linear-gradient(180deg,#f3fbf6,#ffffff);
+      border-top-left-radius:20px;border-top-right-radius:20px;
+    }
+    .chat-title{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;color:var(--accent-dark)}
+    .chat-sub{font-weight:800;color:var(--accent-dark)}
+    .close-btn{background:transparent;border:none;font-size:24px;cursor:pointer;padding:6px 8px;color:var(--accent-dark)}
+
+    .chat-body{
+      flex:1;padding:14px 16px;overflow:auto;background:#f7f9f8;
+      font-size:15px;line-height:1.55;color:#0f172a;
+    }
+    .msg{max-width:85%;margin:8px 0;padding:12px 14px;border-radius:14px}
+    .msg.bot{background:#ecfdf5;border:1px solid #b3f0d1;color:#064e3b}
+    .msg.user{background:#e5e7eb;margin-left:auto;border:1px solid #cdd2d7;color:#0f172a}
+
+    .chat-input{
+      display:flex;gap:10px;padding:12px;border-top:1px solid #e6ebe8;background:#ffffff;
+    }
+    .chat-input input{
+      flex:1;padding:12px 14px;border-radius:14px;border:1px solid #cfd6d3;outline:none;
+    }
+    .chat-input button{
+      padding:12px 16px;border-radius:14px;border:none;background:var(--accent);color:white;font-weight:800;cursor:pointer;
+    }
+    .chat-input button:hover{background:#17b14b}
+
+    @media (max-width:720px){
+      main{padding:70px 24px 90px}
+      .help-title{font-size:32px}
+      .help-item h3{font-size:22px}
+      .help-item p{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Top navigation">
+    <a href="index.html" target="_self">Home</a>
+    <a href="services.html" target="_self">Services</a>
+    <a href="help.html" class="active" target="_self">Help</a>
+    <a href="policy.html" target="_self">Privacy policy</a>
+  </nav>
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo" /></div>
+      <div class="nav-links" aria-label="Sidebar">
+        <a href="dashboard.html" target="_self">
+          <img src="dashboard.png" class="icon" alt="Dashboard icon"> Dashboard
+        </a>
+        <a href="insights.html" target="_self">
+          <img src="insights.png" class="icon" alt="Insights icon"> Previous Insights
+        </a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html" target="_self">Logout</a></div>
+  </aside>
+
+  <div class="bg-logo"><img src="iMark.png" alt="background logo" /></div>
+
+  <main>
+    <section class="help-frame" role="region" aria-label="Help content">
+      <div class="help-badge">HELP</div>
+      <h1 class="help-title">We're here to guide you.</h1>
+
+      <ul class="help-list">
+        <li class="help-item">
+          <h3>1. Getting Started</h3>
+          <p>Use the Services page to navigate features. Choose a feature like <span class="help-em">Segmentation</span> or <span class="help-em">Content Generator</span>, then upload to begin.</p>
+        </li>
+        <li class="help-item">
+          <h3>2. Forgot Your Password?</h3>
+          <p>Go to the Login page and click <strong>“Forgot Password.”</strong> You’ll receive a reset link by email.</p>
+        </li>
+        <li class="help-item">
+          <h3>3. Understanding the AI Features</h3>
+          <p>The tools provide analytics and suggestions — not final content. Always review and adapt AI-generated material before posting.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <button class="ai-fab" id="openChat" aria-controls="chatPanel" aria-expanded="false">AI Support</button>
+
+  <section class="chat-panel" id="chatPanel" aria-label="AI support chat" aria-hidden="true">
+    <header class="chat-header">
+      <div class="chat-title">
+        <img src="iMark.png" alt="" width="22" height="22" style="opacity:.85"/>
+        <span>AI support</span>
+      </div>
+      <div class="chat-sub">Your 24/7 Guide</div>
+      <button class="close-btn" id="closeChat" aria-label="Close chat">×</button>
+    </header>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot">Hi! Have a question? Ask me anything.</div>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Type here" aria-label="Type your message"/>
+      <button type="submit">Send ↑</button>
+    </form>
+  </section>
+
+  <footer>POWERED BY NULL SPACE</footer>
+
+  <script>
+    const openBtn = document.getElementById('openChat');
+    const closeBtn = document.getElementById('closeChat');
+    const panel = document.getElementById('chatPanel');
+    const body = document.getElementById('chatBody');
+    const form = document.getElementById('chatForm');
+    const input = document.getElementById('chatInput');
+
+    function openChat(){
+      panel.style.display = 'flex';
+      panel.setAttribute('aria-hidden','false');
+      openBtn.setAttribute('aria-expanded','true');
+      input.focus();
+    }
+    function closeChat(){
+      panel.style.display = 'none';
+      panel.setAttribute('aria-hidden','true');
+      openBtn.setAttribute('aria-expanded','false');
+      openBtn.focus();
+    }
+    openBtn.addEventListener('click', openChat);
+    closeBtn.addEventListener('click', closeChat);
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const text = input.value.trim();
+      if(!text) return;
+      body.insertAdjacentHTML('beforeend', `<div class="msg user">${text}</div>`);
+      input.value = '';
+      setTimeout(()=>{
+        body.insertAdjacentHTML('beforeend', `<div class="msg bot">Thanks! For now this is a demo. You asked: “${text}”.</div>`);
+        body.scrollTop = body.scrollHeight;
+      }, 300);
+      body.scrollTop = body.scrollHeight;
+    });
+
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && panel.style.display==='flex') closeChat(); });
+  </script>
+</body>
+</html>

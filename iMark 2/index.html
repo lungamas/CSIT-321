@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iMark • Craft Captivating Campaigns</title>
+  <style>
+    :root {
+      --grey-bar: #666D66;
+      --gradient-dark: #131613;
+      --gradient-light: #138C3D;
+      --accent: #16A348;
+      --text: #ffffff;
+      --text-muted: #bfbfbf;
+      --radius: 16px;
+      --shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(145deg, var(--gradient-dark) 0%, var(--gradient-dark) 25%, var(--gradient-light) 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--grey-bar);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      margin: 70px 20px 60px;
+    }
+
+    .hero img {
+      width: 600px;
+      max-width: 90%;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid var(--accent);
+      background-color: transparent;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      color: #000;
+    }
+
+    .btn.primary {
+      background-color: var(--accent);
+      color: #000;
+    }
+
+    .btn.primary:hover {
+      background-color: #128838;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, var(--gradient-dark) 0%, var(--gradient-dark) 25%, var(--gradient-light) 100%);
+      border-radius: var(--radius);
+      padding: 24px 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--text);
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 20px 40px;
+      background-color: transparent;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero img {
+        width: 320px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+      nav a {
+        margin-left: 16px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+     <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Services</a>
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="iMark.png" alt="iMark Logo" />
+    <h1>Craft Captivating Campaigns</h1>
+    <h2>Intelligent Marketing Starts Here</h2>
+
+    <div class="hero-buttons">
+      <a href="login.html" target="_self" class="btn">Log In</a>
+      <a href="signup.html" target="_self" class="btn primary">Sign Up</a>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="segmentation.png" alt="Segmentation Icon">
+      <h3>Segmentation Reporting</h3>
+      <p>Automatically group customers based on behavior and data to generate insightful personas.</p>
+    </div>
+
+    <div class="card">
+      <img src="performance.png" alt="Performance Icon">
+      <h3>Performance Reporting</h3>
+      <p>Track engagement and reach through real-time analytics powered by your company’s data.</p>
+    </div>
+
+    <div class="card">
+      <img src="content.png" alt="Content Icon">
+      <h3>Content Recommendation</h3>
+      <p>Receive AI-generated captions, hashtags, and slogans tailored to your campaign goals.</p>
+    </div>
+
+    <div class="card">
+      <img src="dashboards.png" alt="Dashboard Icon">
+      <h3>Interactive Dashboard</h3>
+      <p>Navigate through all features in a centralized, user-friendly interface designed for clarity and efficiency.</p>
+    </div>
+  </section>
+
+  <footer>
+    POWERED BY NULL SPACE
+  </footer>
+</body>
+</html>

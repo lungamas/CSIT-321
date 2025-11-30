@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iMark • Dashboard</title>
+  <style>
+    :root{
+      --gradient-dark:#131613;
+      --gradient-light:#138C3D;
+      --accent:#16A348;
+      --accent-dark:#0f7f33;
+      --grey-bar:#666D66;
+      --sidebar:#b8b8b8;
+      --glow:#16a348;
+      --text:#ffffff;
+
+      --panel:#D5DBD7;           
+      --panel-border:#c7cdc9;
+      --soft:#0a1b12;            
+      --shadow:0 14px 36px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",Arial,sans-serif}
+
+    body{
+      background:linear-gradient(145deg,var(--gradient-dark) 25%,var(--gradient-light) 100%);
+      color:var(--text);min-height:100vh;overflow-x:hidden;
+    }
+
+    .topbar{
+      position:fixed;top:0;left:0;right:0;height:55px;background:var(--grey-bar);
+      display:flex;align-items:center;justify-content:flex-end;padding-right:50px;gap:40px;z-index:5;
+    }
+    .topbar a{color:#fff;text-decoration:none;font-weight:600;transition:color .25s}
+    .topbar a:hover{color:var(--accent)}
+    .topbar a[href="home.html"]{}
+    .topbar a[href="services.html"]{}
+    .topbar a[href="help.html"]{}
+    .topbar a[href="policy.html"]{}
+
+    .sidebar{
+      position:fixed;top:55px;left:0;bottom:0;width:230px;background:var(--sidebar);
+      padding:25px 20px;display:flex;flex-direction:column;justify-content:space-between;z-index:6;
+      border-top:5px solid var(--glow);border-right:5px solid var(--glow);border-bottom:5px solid var(--glow);border-left:none;
+      box-shadow:5px 0 28px rgba(22,163,72,.75);border-radius:0 16px 16px 0;
+    }
+    .logo{display:flex;justify-content:center;margin-bottom:60px}
+    .logo img{height:60px;width:auto}
+
+    .nav-links{display:flex;flex-direction:column;gap:22px}
+    .nav-links a{
+      color:#fff;text-decoration:none;font-weight:700;display:flex;align-items:center;gap:10px;
+      padding:2px 0;transition:color .2s;
+    }
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links a.active{color:var(--accent)}
+    .nav-links img.icon{width:22px;height:22px}
+
+    .logout a{color:#fff;font-weight:bold;text-decoration:none;transition:color .2s}
+    .logout a:hover{color:var(--accent)}
+
+    .bg-logo{
+      position:fixed;inset:0;display:flex;justify-content:center;align-items:center;z-index:0;
+      opacity:.15;filter:blur(3px);pointer-events:none;
+    }
+    .bg-logo img{width:1500px;height:auto}
+
+    main{
+      margin-left:230px;margin-top:55px;
+      min-height:calc(100vh - 55px);
+      padding:80px 50px 110px;
+      position:relative;z-index:2;
+    }
+
+    .page-header{
+      display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:26px;
+    }
+    .page-title{font-size:44px;font-weight:900;letter-spacing:.3px}
+    .badge{background:#1a2c22;border:1px solid #2f4f3e;color:#a9f2be;
+           padding:8px 14px;border-radius:999px;font-weight:800;font-size:12px}
+
+    .grid{
+      display:grid;gap:22px;
+      grid-template-columns: repeat(12,1fr);
+    }
+
+    .metric{
+      grid-column: span 3;
+      background:var(--panel);border:1px solid var(--panel-border);
+      border-radius:16px;box-shadow:var(--shadow);color:#102016;
+      padding:18px 18px 16px;min-height:112px;display:flex;flex-direction:column;gap:6px;
+    }
+    .metric-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;font-weight:800}
+    .metric-value{font-size:28px;font-weight:900}
+    .metric-delta{font-size:12px;font-weight:700;color:#1f7a3b}
+
+    .feature{
+      grid-column: span 4;
+      background:linear-gradient(145deg,var(--gradient-dark) 25%, var(--gradient-light) 100%);
+      border:1px solid #104026;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.45);
+      padding:22px 20px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;
+      position:relative;overflow:hidden;
+    }
+    .feature::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 2px #1d6e3c22;pointer-events:none}
+    .feature h3{font-size:20px;font-weight:900}
+    .feature p{opacity:.85;line-height:1.6;margin:6px 0 12px}
+    .feature .go{
+      align-self:flex-start;border:1.5px solid #3ad36f;background:#218744;
+      padding:10px 14px;border-radius:12px;color:#fff;font-weight:800;text-decoration:none;transition:filter .2s;
+    }
+    .feature .go:hover{filter:brightness(1.08)}
+    .feature .mini{
+      position:absolute;right:14px;bottom:14px;width:60px;height:60px;opacity:.9;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));
+    }
+
+    .panel{
+      grid-column: span 12;background:var(--panel);border:1px solid var(--panel-border);
+      border-radius:18px;box-shadow:var(--shadow);color:#102016;padding:20px 18px;
+    }
+    .panel h4{margin-bottom:10px;color:#0a2a1c;font-size:18px}
+    .panel .row{display:flex;gap:12px;flex-wrap:wrap}
+    .panel input[type="text"]{
+      flex:1 1 380px;max-width:640px;background:#ffffff;border:1px solid #cfd4d1;border-radius:14px;
+      padding:12px 14px;font-size:14px;outline:none;
+    }
+    .panel .action{
+      border:1.5px solid #3ad36f;background:#218744;color:#fff;border-radius:12px;
+      padding:12px 16px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    }
+
+    .insights{
+      grid-column: span 12;background:linear-gradient(145deg,#0b1f16,#0e2b1c);
+      border:1px solid #163425;border-radius:18px;box-shadow:var(--shadow);padding:18px 16px;
+    }
+    .insights h4{font-size:18px;margin-bottom:8px}
+    .ins-list{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+    .ins-item{
+      background:#0f2018;border:1px solid #183526;border-radius:14px;padding:12px 12px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+    }
+    .ins-left{display:flex;align-items:center;gap:12px}
+    .ins-left img{width:26px;height:26px}
+    .ins-title{font-weight:800}
+    .ins-meta{font-size:12px;color:#9baaa0;margin-top:2px;}
+    .ins-item a{
+      border:1.5px solid #3ad36f;background:#218744;padding:8px 12px;border-radius:10px;color:#fff;
+      text-decoration:none;font-weight:800;transition:filter .2s;
+    }
+    .ins-item a:hover{filter:brightness(1.08)}
+
+    footer{position:fixed;right:20px;bottom:15px;font-size:12px;color:#ccc}
+
+    @media (max-width:1100px){
+      .metric{grid-column: span 6}
+      .feature{grid-column: span 6}
+    }
+    @media (max-width:760px){
+      main{padding:70px 22px 100px}
+      .page-title{font-size:36px}
+      .metric,.feature,.panel,.insights{grid-column:1 / -1}
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Top navigation">
+    <a href="index.html" target="_self">Home</a>
+    <a href="services.html" target="_self">Services</a>
+    <a href="help.html" target="_self">Help</a>
+    <a href="policy.html" target="_self">Privacy policy</a>
+  </nav>
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo"/></div>
+      <div class="nav-links" aria-label="Sidebar">
+        <a href="dashboard.html" class="active" target="_self">
+          <img src="dashboards.png" class="icon" alt=""> Dashboard
+        </a>
+        <a href="insights.html" target="_self">
+          <img src="insights.png" class="icon" alt=""> Previous Insights
+        </a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html" target="_self">Logout</a></div>
+  </aside>
+
+  <div class="bg-logo"><img src="iMark.png" alt="background logo"/></div>
+
+  <main>
+    <div class="page-header">
+      <h1 class="page-title">Dashboard</h1>
+      <span class="badge">OVERVIEW</span>
+    </div>
+
+    <section class="grid">
+      <!-- Active projects (kept static for now) -->
+      <div class="metric">
+        <div class="metric-label">Active projects</div>
+        <div class="metric-value">1</div>
+        <div class="metric-delta">Roaa Wood Artisan</div>
+      </div>
+
+      <!-- Generated insights (dynamic) -->
+      <div class="metric">
+        <div class="metric-label">Generated insights</div>
+        <div class="metric-value" id="metricTotalInsights">0</div>
+        <div class="metric-delta" id="metricTotalDelta">Insights created this session</div>
+      </div>
+
+      <!-- Content drafts (dynamic: content-type insights) -->
+      <div class="metric">
+        <div class="metric-label">Content drafts</div>
+        <div class="metric-value" id="metricContentCount">0</div>
+        <div class="metric-delta">From Content Generation</div>
+      </div>
+
+      <!-- Avg processing time (static placeholder) -->
+      <div class="metric">
+        <div class="metric-label">Avg. processing time</div>
+        <div class="metric-value">1m 42s</div>
+        <div class="metric-delta">Demo benchmark</div>
+      </div>
+
+      <article class="feature">
+        <div>
+          <h3>Segmentation Reporting</h3>
+          <p>Group customers into meaningful cohorts and uncover personas from your uploaded data.</p>
+        </div>
+        <a class="go" href="segmentation.html" target="_self">Open Segmentation</a>
+        <img class="mini" src="segmentation.png" alt="">
+      </article>
+
+      <article class="feature">
+        <div>
+          <h3>Performance Reporting</h3>
+          <p>Track engagement and reach with real-time analytics powered by your company’s data.</p>
+        </div>
+        <a class="go" href="performance.html" target="_self">Open Performance</a>
+        <img class="mini" src="performance.png" alt="">
+      </article>
+
+      <article class="feature">
+        <div>
+          <h3>Content Generation</h3>
+          <p>Get AI-generated captions, hashtags, and slogans tailored to your campaign goals.</p>
+        </div>
+        <a class="go" href="recommendation.html" target="_self">Open Content</a>
+        <img class="mini" src="content.png" alt="">
+      </article>
+
+      <section class="panel">
+        <h4>Quick Task</h4>
+        <div class="row">
+          <input type="text" placeholder="Describe an insight you want to generate (optional)…"/>
+          <a class="action" href="segmentation.html" target="_self">New Insight</a>
+        </div>
+      </section>
+
+      <section class="insights">
+        <h4>Recent Insights</h4>
+        <div class="ins-list" id="recentInsightsList">
+          <!-- Filled dynamically from backend -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>POWERED BY NULL SPACE</footer>
+
+  <script>
+    async function loadDashboardSummary() {
+      try {
+        const res = await fetch("/api/dashboard/summary");
+        const data = await res.json();
+        if (!res.ok) {
+          console.error("Dashboard summary error:", data);
+          return;
+        }
+
+        // Metrics
+        const total = data.totalInsights ?? 0;
+        const contentCount = data.contentCount ?? 0;
+
+        const totalEl = document.getElementById("metricTotalInsights");
+        const contentEl = document.getElementById("metricContentCount");
+        const deltaEl = document.getElementById("metricTotalDelta");
+
+        if (totalEl) totalEl.textContent = total;
+        if (contentEl) contentEl.textContent = contentCount;
+        if (deltaEl) {
+          deltaEl.textContent =
+            total > 0 ? `${total} insights generated in this workspace` : "No insights yet – try generating one.";
+        }
+
+        // Recent insights list
+        const list = document.getElementById("recentInsightsList");
+        if (!list) return;
+        list.innerHTML = "";
+
+        const recent = Array.isArray(data.recent) ? data.recent : [];
+
+        if (recent.length === 0) {
+          const empty = document.createElement("div");
+          empty.style.color = "#cbd5d0";
+          empty.style.fontSize = "13px";
+          empty.textContent = "No insights generated yet. Once you run Segmentation, Performance or Content reports, they will appear here.";
+          list.appendChild(empty);
+          return;
+        }
+
+        recent.forEach(insight => {
+          const date = insight.createdAt ? new Date(insight.createdAt) : null;
+          const formattedDate = date
+            ? date.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })
+            : "";
+
+          const type = insight.type || "insight";
+          const niceType = type.charAt(0).toUpperCase() + type.slice(1);
+
+          const item = document.createElement("div");
+          item.className = "ins-item";
+          item.innerHTML = `
+            <div class="ins-left">
+              <img src="time.png" alt="">
+              <div>
+                <div class="ins-title">${insight.title || "Untitled insight"}</div>
+                <div class="ins-meta">${niceType}${formattedDate ? " • " + formattedDate : ""}</div>
+              </div>
+            </div>
+            <a href="insights.html" target="_self">View Details</a>
+          `;
+          list.appendChild(item);
+        });
+      } catch (err) {
+        console.error("Failed to load dashboard summary:", err);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadDashboardSummary);
+  </script>
+</body>
+</html>

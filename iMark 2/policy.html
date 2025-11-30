@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iMark • Privacy Policy</title>
+  <style>
+    :root{
+      --gradient-dark:#131613;
+      --gradient-light:#138C3D;
+      --accent:#16A348;
+      --accent-dark:#0f7f33;
+      --grey-bar:#666D66;
+      --sidebar:#b8b8b8;
+      --glow:#16a348;
+      --text:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",Arial,sans-serif}
+    body{
+      background:linear-gradient(145deg,var(--gradient-dark) 25%,var(--gradient-light) 100%);
+      color:var(--text);min-height:100vh;overflow-x:hidden;
+    }
+
+    .topbar{
+      position:fixed;top:0;left:0;right:0;height:55px;background:var(--grey-bar);
+      display:flex;align-items:center;justify-content:flex-end;padding-right:50px;gap:40px;z-index:5;
+    }
+    .topbar a{color:#fff;text-decoration:none;font-weight:600;transition:color .25s}
+    .topbar a:hover{color:var(--accent)}
+    .topbar a.active{color:var(--accent)}
+
+    .sidebar{
+      position:fixed;top:55px;left:0;bottom:0;width:230px;background:var(--sidebar);
+      padding:25px 20px;display:flex;flex-direction:column;justify-content:space-between;z-index:6;
+      border-top:4px solid var(--glow);border-right:4px solid var(--glow);border-bottom:4px solid var(--glow);border-left:none;
+      box-shadow:5px 0 25px rgba(22,163,72,.7);border-radius:0 15px 15px 0;
+    }
+    .logo{display:flex;justify-content:center;margin-bottom:60px}
+    .logo img{height:60px;width:auto}
+    .nav-links{display:flex;flex-direction:column;gap:25px}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:10px;transition:color .25s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links img.icon{width:22px;height:22px}
+    .logout a{color:#fff;font-weight:bold;text-decoration:none;transition:color .25s}
+    .logout a:hover{color:var(--accent)}
+
+    .bg-logo{
+      position:fixed;inset:0;display:flex;justify-content:center;align-items:center;z-index:0;
+      opacity:.15;filter:blur(3px);pointer-events:none;
+    }
+    .bg-logo img{width:1500px;height:auto}
+
+    main{
+      margin-left:230px;margin-top:55px;
+      min-height:calc(100vh - 55px);
+      padding:120px 60px 120px;
+      position:relative;z-index:2;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+
+    .policy-frame{
+      max-width:1100px;width:100%;
+      background: radial-gradient(1200px 800px at 30% 20%, #0b3d25 0%, #062015 55%, #051a12 100%);
+      border:1px solid #183024;border-radius:22px;
+      padding:36px 28px 44px;color:#d7fbe6;
+      box-shadow:0 16px 44px rgba(0,0,0,.35) inset, 0 8px 24px rgba(0,0,0,.35);
+    }
+    .policy-badge{
+      width:max-content;margin:0 auto 20px;padding:16px 28px;border-radius:26px;
+      background:#2f3b35;color:#7FE28F;font-weight:900;letter-spacing:.08em;
+    }
+    .policy-title{
+      text-align:center;font-size:40px;font-weight:900;color:#c7f9cc;
+      margin:6px 0 28px;text-decoration:underline;text-underline-offset:8px;
+    }
+    .policy-list{list-style:none;padding-left:0;margin-top:6px}
+    .policy-item{margin:24px 0}
+    .policy-item h3{font-size:28px;font-weight:900;color:#eafff0;margin:0 0 10px}
+    .policy-item p{font-size:20px;line-height:1.75;color:#cfe9dc;margin:0}
+
+    footer{
+      position:fixed;right:20px;bottom:15px;font-size:12px;color:#ccc;letter-spacing:.03em;
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="help.html">Help</a>
+    <a href="policy.html" class="active">Privacy Policy</a>
+  </nav>
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo"/></div>
+      <div class="nav-links">
+        <a href="dashboard.html"><img src="dashboard.png" class="icon" alt=""> Dashboard</a>
+        <a href="insights.html"><img src="insights.png" class="icon" alt=""> Previous Insights</a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html">Logout</a></div>
+  </aside>
+
+  <div class="bg-logo"><img src="iMark.png" alt="background logo"/></div>
+
+  <main>
+    <section class="policy-frame">
+      <div class="policy-badge">PRIVACY POLICY</div>
+      <h1 class="policy-title">Your Data. Our Responsibility.</h1>
+
+      <ul class="policy-list">
+        <li class="policy-item">
+          <h3>1. Data Collection</h3>
+          <p>We collect minimal data to personalize your experience. This may include uploaded campaign files, prompt text, usage logs, and user credentials.</p>
+        </li>
+
+        <li class="policy-item">
+          <h3>2. How We Use Your Data</h3>
+          <p>Uploaded data is processed only to generate insights and recommendations. We do not share or sell your data to third parties.</p>
+        </li>
+
+        <li class="policy-item">
+          <h3>3. Storage and Security</h3>
+          <p>All data is encrypted in transit and at rest. Our system is designed with privacy-first principles to protect your files and information.</p>
+        </li>
+
+        <li class="policy-item">
+          <h3>4. Third-Party Services</h3>
+          <p>Some features may use external AI APIs. These services follow their own privacy policies.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>POWERED BY NULL SPACE</footer>
+</body>
+</html>

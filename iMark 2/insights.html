@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previous Insights • iMark</title>
+  <style>
+    :root{
+      --gradient-dark:#131613;
+      --gradient-light:#138C3D;
+      --accent:#16A348;
+      --grey-bar:#666D66;
+      --sidebar:#b8b8b8;
+      --glow:#16a348;
+
+      --panel-solid:#D7DBD8;
+      --panel-edge:#0f322a;
+      --panel-border:#cfd4d1;
+      --text-dark:#121417;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",Arial,sans-serif}
+
+    body{background:linear-gradient(145deg,var(--gradient-dark) 25%,var(--gradient-light) 100%);color:#fff;min-height:100vh;overflow-x:hidden}
+
+    header{position:fixed;top:0;left:0;right:0;height:55px;background:#666D66;display:flex;align-items:center;justify-content:flex-end;padding-right:50px;gap:40px;z-index:5}
+    header a{color:#fff;text-decoration:none;font-weight:600;transition:color .3s}
+    header a:hover{color:var(--accent)} header a.active{color:var(--accent)}
+
+    .sidebar{
+      position:fixed;top:55px;left:0;bottom:0;width:230px;background:var(--sidebar);
+      padding:25px 20px;display:flex;flex-direction:column;justify-content:space-between;z-index:6;
+      border-top:4px solid var(--glow);border-right:4px solid var(--glow);border-bottom:4px solid var(--glow);border-left:none;
+      box-shadow:5px 0 25px rgba(22,163,72,.7);border-radius:0 15px 15px 0
+    }
+    .logo{display:flex;justify-content:center;margin-bottom:60px}
+    .logo img{height:60px}
+    .nav-links{display:flex;flex-direction:column;gap:25px}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:10px;transition:color .3s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links a.active{color:var(--accent)}
+    .nav-links img.icon{width:22px;height:22px}
+    .logout a{color:#fff;font-weight:bold;text-decoration:none;transition:color .3s}
+    .logout a:hover{color:var(--accent)}
+
+    .bg-logo{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;z-index:0;opacity:.15;filter:blur(3px);pointer-events:none}
+    .bg-logo img{width:1500px;height:auto}
+
+    main{margin-left:230px;margin-top:55px;padding:60px;position:relative;z-index:2}
+    h1{text-align:center;color:var(--accent);margin-bottom:30px;font-size:32px;font-weight:800}
+
+    .container{background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:24px;box-shadow:0 14px 30px rgba(0,0,0,.35) inset}
+
+    .insight{
+      background:var(--panel-solid);
+      border:1px solid var(--panel-border);
+      border-radius:14px;
+      padding:18px;
+      margin:0 0 20px 0;
+      box-shadow:0 2px 0 0 var(--panel-edge) inset, 0 10px 16px rgba(0,0,0,.35);
+      color:var(--text-dark);
+      display:flex;align-items:center;gap:18px;justify-content:space-between;
+    }
+    .left{display:flex;align-items:center;gap:16px;min-width:0}
+    .time-icon{background:#E4F5EA;border-radius:12px;padding:12px;display:grid;place-items:center}
+    .time-icon img{width:24px;height:24px}
+    .title{font-weight:700;font-size:18px;color:#0f1512;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:650px}
+
+    .view-btn{background:#fff;border:none;border-radius:12px;padding:10px 16px;font-weight:600;color:#1f2a1f;box-shadow:0 6px 14px rgba(0,0,0,.2);cursor:pointer;transition:filter .2s,transform .15s}
+    .view-btn:hover{filter:brightness(.97);transform:translateY(-1px)}
+    .view-btn a{color:inherit;text-decoration:none;display:block}
+
+    footer{position:fixed;bottom:15px;right:20px;font-size:12px;color:#ccc;letter-spacing:.03em}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" target="_self">Home</a>
+    <a href="services.html" class="active" target="_self">Services</a>
+    <a href="help.html" target="_self">Help</a>
+    <a href="policy.html" target="_self">Privacy policy</a>
+  </header>
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo"><img src="iMark.png" alt="iMark logo" /></div>
+      <div class="nav-links">
+        <a href="dashboard.html" target="_self">
+          <img src="dashboard.png" class="icon" alt="Dashboard icon"> Dashboard
+        </a>
+        <a href="insights.html" class="active" target="_self">
+          <img src="insightss.png" class="icon" alt="Insights icon"> Previous Insights
+        </a>
+      </div>
+    </div>
+    <div class="logout"><a href="home.html" target="_self">Logout</a></div>
+  </aside>
+
+  <div class="bg-logo"><img src="iMark.png" alt="background logo" /></div>
+
+  <main>
+    <h1>PREVIOUS INSIGHTS</h1>
+
+    <div class="container">
+      <div class="insight">
+        <div class="left">
+          <div class="time-icon"><img src="time.png" alt="time icon"></div>
+          <div class="title">Analyze the performance of recent social media ad campaigns</div>
+        </div>
+        <button class="view-btn"><a href="viewdetails.html" target="_self">View Details</a></button>
+      </div>
+
+      <div class="insight">
+        <div class="left">
+          <div class="time-icon"><img src="time.png" alt="time icon"></div>
+          <div class="title">Compare pre-launch and post-launch campaign data (ROI)</div>
+        </div>
+        <button class="view-btn"><a href="#" target="_self">View Details</a></button>
+      </div>
+
+      <div class="insight">
+        <div class="left">
+          <div class="time-icon"><img src="time.png" alt="time icon"></div>
+          <div class="title">Recommend optimized target audience</div>
+        </div>
+        <button class="view-btn"><a href="#" target="_self">View Details</a></button>
+      </div>
+
+      <div class="insight">
+        <div class="left">
+          <div class="time-icon"><img src="time.png" alt="time icon"></div>
+          <div class="title">Generate a 7-day content calendar for this product</div>
+        </div>
+        <button class="view-btn"><a href="#" target="_self">View Details</a></button>
+      </div>
+    </div>
+  </main>
+
+  <footer>POWERED BY NULL SPACE</footer>
+</body>
+</html>
