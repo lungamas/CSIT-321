@@ -167,67 +167,143 @@ class MLChatbot:
     
     def _handle_performance_query(self, message, context):
         """Handle performance-related queries"""
-        if context and 'metrics' in context:
-            metrics = context['metrics']
-            roi_pred = self.predict_performance(metrics, 'roi')
-            conv_pred = self.predict_performance(metrics, 'conversion')
-            eng_pred = self.predict_performance(metrics, 'engagement')
-            
-            response = "Based on your campaign metrics, here's what our ML model predicts:\n\n"
-            if roi_pred is not None:
-                response += f"• Predicted ROAS: {roi_pred:.2f}x\n"
-            if conv_pred is not None:
-                response += f"• Predicted Conversion Rate: {conv_pred*100:.2f}%\n"
-            if eng_pred is not None:
-                response += f"• Predicted CTR: {eng_pred*100:.2f}%\n"
-            
-            response += "\nThese predictions are based on your historical campaign data and ML analysis."
-            return response
-        
-        return "I can analyze your campaign performance using machine learning! Please provide metrics like impressions, clicks, spend, and conversions, and I'll predict your ROI, conversion rate, and engagement."
+        return """📊 **Performance Reporting**
+
+To analyze your campaign performance:
+
+1. Navigate to the **Performance** page from the dashboard
+2. Upload your campaign data (CSV file with columns: impressions, clicks, spend, conversions, sessions, add_to_carts, avg_session_duration)
+3. Select your analysis mode:
+   • **ROI Mode** - Analyze return on ad spend
+   • **Engagement Mode** - Analyze click-through rates
+   • **Conversion Mode** - Analyze conversion rates
+4. Click "Analyze" to get ML-powered predictions
+
+The system will show you top-performing campaigns and detailed metrics to optimize your marketing strategy."""
     
     def _handle_content_query(self, message, context):
         """Handle content recommendation queries"""
-        if context and 'content_metrics' in context:
-            score = self.recommend_content(context['content_metrics'])
-            if score is not None:
-                return f"Our ML model scored this content strategy at {score:.2f}/10. This indicates {'excellent' if score > 7 else 'good' if score > 5 else 'moderate'} performance potential based on historical data."
-        
-        return "I can recommend content strategies using ML! Our models analyze engagement rates, conversion rates, ROAS, and sample sizes to suggest the best performing content types for your campaigns."
+        return """📝 **Content Recommendation**
+
+To get AI-powered content recommendations:
+
+1. Go to the **Recommendation** page from the main menu
+2. Upload your content performance data (CSV with: content_id, persona_key, campaign_goal, channel, format, avg_engagement_rate, avg_conversion_rate, avg_roas, sample_size)
+3. Click "Get Recommendations"
+4. Review the top-performing content suggestions based on:
+   • Engagement rates
+   • Conversion rates
+   • Return on ad spend
+   • Historical performance
+
+The ML model will rank content strategies and suggest the best combinations of persona, channel, and format for your campaigns."""
     
     def _handle_segmentation_query(self, message, context):
         """Handle customer segmentation queries"""
-        if context and 'customer' in context:
-            segment = self.segment_customer(context['customer'], 'behavior')
-            if segment:
-                personas = {
-                    "Eco-Lux Loyalists": "high-value customers who prioritize premium, sustainable products",
-                    "Aspiring Aesthetes": "trend-conscious buyers seeking aesthetic appeal and quality",
-                    "Eco-Gift Shoppers": "occasional buyers focused on eco-friendly gift purchases"
-                }
-                description = personas.get(segment, "a unique customer group")
-                return f"Our ML model classifies this customer as: **{segment}** - {description}. This segmentation helps tailor marketing strategies for better engagement."
-        
-        return "I can segment your customers using machine learning! Provide customer data like spending patterns, order frequency, and engagement metrics, and I'll identify which persona group they belong to for targeted marketing."
+        return """👥 **Customer Segmentation**
+
+To segment your customers using AI:
+
+1. Navigate to the **Segmentation** page
+2. Upload your customer data (CSV with: customer_id, monthly_spend, avg_order_value, orders_per_month, visits_per_month, age, category_preference_score)
+3. Choose your segmentation mode:
+   • **Behavior Segmentation** - Based on spending and purchase patterns
+   • **Campaign Segmentation** - Based on campaign response
+   • **Engagement Segmentation** - Based on interaction levels
+4. Click "Segment Customers"
+
+The ML model will group customers into personas:
+• **Eco-Lux Loyalists** - High-value sustainable shoppers
+• **Aspiring Aesthetes** - Trend-conscious quality seekers
+• **Eco-Gift Shoppers** - Eco-friendly gift buyers
+
+Use these insights to create targeted marketing campaigns."""
     
     def _handle_prediction_query(self, message, context):
         """Handle prediction queries"""
-        return "Our AI can predict:\n• Campaign ROI and ROAS\n• Conversion rates and CTR\n• Customer lifetime value\n• Content performance scores\n\nProvide your metrics and I'll run them through our ML models for accurate predictions!"
+        return """🔮 **ML Predictions**
+
+To get AI predictions:
+
+**📊 For Campaign Performance:**
+→ Go to Performance page
+→ Upload campaign data
+→ Select prediction mode (ROI/Engagement/Conversion)
+
+**📝 For Content Strategy:**
+→ Go to Recommendation page
+→ Upload content data
+→ Get ranked recommendations
+
+**👥 For Customer Personas:**
+→ Go to Segmentation page
+→ Upload customer data
+→ Choose segmentation type
+
+Each page has ML models trained on your data for accurate predictions!"""
     
     def _handle_general_query(self, message):
         """Handle general queries"""
         msg_lower = message.lower()
         
         if any(word in msg_lower for word in ['hello', 'hi', 'hey']):
-            return "Hello! I'm your AI marketing assistant powered by machine learning. I can help you with:\n• Campaign performance predictions\n• Content recommendations\n• Customer segmentation\n• ROI forecasting\n\nWhat would you like to analyze today?"
+            return """👋 Hello! I'm your iMark AI assistant. I can guide you to:
+
+📊 **Performance Reporting** - Analyze campaign ROI and metrics
+📝 **Content Recommendation** - Get AI content suggestions  
+👥 **Customer Segmentation** - Segment your audience
+📈 **Dashboard** - View your marketing overview
+
+Ask me about any of these features and I'll show you how to use them!"""
         
-        if any(word in msg_lower for word in ['help', 'what can you do', 'capabilities']):
-            return "I use trained ML models to help with:\n\n1. **Performance Analysis** - Predict ROI, conversions, and engagement\n2. **Content Recommendations** - Suggest best-performing content strategies\n3. **Customer Segmentation** - Identify customer personas for targeting\n4. **Predictive Analytics** - Forecast campaign outcomes\n\nAsk me anything about your marketing data!"
+        if any(word in msg_lower for word in ['help', 'what can you do', 'capabilities', 'features']):
+            return """🎯 **iMark Platform Guide**
+
+I can help you navigate to:
+
+1. **📊 Performance Reporting** - Upload campaign data to get ML predictions on ROI, CTR, and conversions
+2. **📝 Content Recommendation** - Get AI-powered content strategy suggestions
+3. **👥 Customer Segmentation** - Segment customers into personas for targeted marketing
+4. **📈 Dashboard** - View your marketing analytics overview
+
+Just ask me about any feature (e.g., "How do I use performance reporting?" or "Show me segmentation") and I'll guide you!"""
         
         if 'thank' in msg_lower:
-            return "You're welcome! Let me know if you need more ML-powered insights for your campaigns."
+            return "You're welcome! Feel free to ask if you need help navigating to any page or using a feature. 😊"
         
-        return f"I'm an AI assistant trained on your marketing data. I can analyze campaigns, predict performance, recommend content, and segment customers using machine learning. How can I help you optimize your marketing?"
+        if any(word in msg_lower for word in ['dashboard', 'home', 'overview']):
+            return """📈 **Dashboard**
+
+Your dashboard shows:
+• Recent insights and reports
+• Quick access to all features
+• Performance summaries
+
+Navigate to the **Dashboard** from the main menu to see your marketing analytics overview."""
+        
+        if any(word in msg_lower for word in ['upload', 'file', 'data', 'csv']):
+            return """📁 **Uploading Data**
+
+For each feature, you need specific CSV files:
+
+**Performance**: impressions, clicks, spend, conversions, sessions, add_to_carts, avg_session_duration
+
+**Content**: content_id, persona_key, campaign_goal, channel, format, avg_engagement_rate, avg_conversion_rate, avg_roas, sample_size
+
+**Segmentation**: customer_id, monthly_spend, avg_order_value, orders_per_month, visits_per_month, age, category_preference_score
+
+Upload your CSV on the respective page and the AI will analyze it!"""
+        
+        return """🤖 **iMark AI Assistant**
+
+I'm here to help you navigate the platform! Ask me about:
+
+• "How to use performance reporting?"
+• "Where is content recommendation?"
+• "How do I segment customers?"
+• "What data do I need to upload?"
+
+I'll guide you to the right page with step-by-step instructions!"""
 
 
 def main():
