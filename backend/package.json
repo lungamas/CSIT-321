@@ -13,8 +13,10 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "multer": "^2.0.2",
+    "nodemailer": "^6.10.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {

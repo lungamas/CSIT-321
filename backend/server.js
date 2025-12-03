@@ -9,6 +9,7 @@ const path = require("path");
 const { spawn } = require("child_process");
 const { exec } = require("child_process");
 const fs = require("fs");
+require('dotenv').config();
 
 // Import database module
 const {
@@ -23,8 +24,12 @@ const {
   getLoginHistory
 } = require('./database');
 
+// Import email service
+const { sendPasswordResetEmail } = require('./emailService');
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const APP_URL = process.env.APP_URL || `http://localhost:${PORT}`;
 
 // ---------- Basic setup ----------
 app.use(cors());
@@ -262,19 +267,21 @@ app.post("/api/auth/forgot-password", async (req, res) => {
     });
 
     // Create reset link
-    const resetLink = `http://localhost:3000/api/auth/auto-login?token=${token}`;
+    const resetLink = `${APP_URL}/api/auth/auto-login?token=${token}`;
     
-    // Send email (simple console log for now - you can integrate with nodemailer)
-    console.log('\n=== PASSWORD RESET EMAIL ===');
-    console.log('To:', email);
-    console.log('Reset Link:', resetLink);
-    console.log('Token expires in 1 hour');
-    console.log('===========================\n');
+    // Send email
+    const emailResult = await sendPasswordResetEmail(email, resetLink, user.full_name || user.username);
+    
+    if (emailResult.method === 'console' || emailResult.method === 'console-fallback') {
+      // In development mode without email config, return the link
+      return res.json({ 
+        message: "Password reset link generated (Development Mode - check console)",
+        resetLink: resetLink
+      });
+    }
 
     res.json({ 
-      message: "If this email exists, a password reset link has been sent.",
-      // In development, also return the link
-      resetLink: resetLink
+      message: "If this email exists, a password reset link has been sent to your inbox."
     });
   } catch (error) {
     console.error('Forgot password error:', error);
