@@ -32,9 +32,9 @@ cp .env.example .env
 ```env
 # Email Configuration
 EMAIL_SERVICE=gmail
-EMAIL_USER=your-email@gmail.com
+EMAIL_USER=nullspace.imark@gmail.com
 EMAIL_PASSWORD=your-app-password
-EMAIL_FROM=noreply@imark.com
+EMAIL_FROM=iMark by NULL SPACE <nullspace.imark@gmail.com>
 
 # Application URL (change for production)
 APP_URL=http://localhost:3000
