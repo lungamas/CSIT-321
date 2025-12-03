@@ -272,16 +272,10 @@ app.post("/api/auth/forgot-password", async (req, res) => {
     // Send email
     const emailResult = await sendPasswordResetEmail(email, resetLink, user.full_name || user.username);
     
-    if (emailResult.method === 'console' || emailResult.method === 'console-fallback') {
-      // In development mode without email config, return the link
-      return res.json({ 
-        message: "Password reset link generated (Development Mode - check console)",
-        resetLink: resetLink
-      });
-    }
-
+    // Always return success message (security: don't reveal if email exists)
+    // Link is only sent via email, never displayed to user
     res.json({ 
-      message: "If this email exists, a password reset link has been sent to your inbox."
+      message: "If this email exists in our system, a password reset link has been sent to your inbox."
     });
   } catch (error) {
     console.error('Forgot password error:', error);
