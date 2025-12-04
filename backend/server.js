@@ -251,9 +251,12 @@ app.post("/api/auth/forgot-password", async (req, res) => {
   try {
     const user = await getUserByEmail(email);
     
-    // Always return success for security (don't reveal if email exists)
+    // If user not found, return error
     if (!user) {
-      return res.json({ message: "If this email exists, a password reset link has been sent." });
+      return res.status(404).json({ 
+        message: "Email not found. Please check your email address or sign up.",
+        found: false
+      });
     }
 
     // Generate secure token (valid for 1 hour)
@@ -269,17 +272,22 @@ app.post("/api/auth/forgot-password", async (req, res) => {
     // Create reset link
     const resetLink = `${APP_URL}/api/auth/auto-login?token=${token}`;
     
-    // Send email
-    const emailResult = await sendPasswordResetEmail(email, resetLink, user.full_name || user.username);
-    
-    // Always return success message (security: don't reveal if email exists)
-    // Link is only sent via email, never displayed to user
+    console.log('\n=== PASSWORD RESET LINK GENERATED ===');
+    console.log('User:', user.email);
+    console.log('Reset Link:', resetLink);
+    console.log('Token expires in 1 hour');
+    console.log('=====================================\n');
+
+    // Return link to display on dashboard
     res.json({ 
-      message: "If this email exists in our system, a password reset link has been sent to your inbox."
+      message: "Password reset link generated successfully.",
+      resetLink: resetLink,
+      found: true,
+      expiresIn: "1 hour"
     });
   } catch (error) {
     console.error('Forgot password error:', error);
-    res.status(500).json({ message: "Internal error." });
+    res.status(500).json({ message: "Internal error.", found: false });
   }
 });
 
